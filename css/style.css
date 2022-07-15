@@ -50,7 +50,7 @@ header > h1{
 }
 
 .sub-container{
-    height: 67%;
+    height: 60%;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -121,9 +121,7 @@ select {
 .back-next{
     display: flex;
     justify-content: space-between;
-    padding-top: 1.5%;
-    padding-left: 8%;
-    padding-right: 12%;
+    margin: 3% 5%;
 }
 
 .back{
