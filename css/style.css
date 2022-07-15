@@ -9,6 +9,9 @@ body{
 header{
     background-color: #7854A6;
     height: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header > h1{
@@ -17,8 +20,6 @@ header > h1{
     color: #E6DFDF;
     font-size: 2rem;
     border: 1px dotted auto;
-    text-align: center;
-    padding-top: 1%;
 }
 
 .container{
@@ -47,24 +48,28 @@ header > h1{
     background-color: #FFFFFF;
     border-radius: 0.8rem;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sub-container{
+    border: 1px dotted blue;
     height: 60%;
     width: 100%;
-    margin: 0 auto;
-    display: flex;
-    padding-top: 35px;
+    display: flex; 
     border-bottom: 1px solid #E2E2E2;
-    padding-left: 8%;
+    justify-content: center;
 }
 
 .symptom-col{
     width: 40%;
+    border:1px dotted red;
 }
 
 .input-col{
     width: 40%;
+    border: 1px dotted red;
 }
 
 .symptom-item{
@@ -104,32 +109,42 @@ select {
 
 
 .greeting{
-    margin-top: 5.4%;
+    border: 1px dotted blue;
+    height: 20%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .please{
-    margin: 0px 9%;
+    margin: 0 9%;
     font-family: 'Poppins';
     font-size: 1.25rem;
 }
 
 .sub-title{
-    margin: 0px 9%;
+    margin: 0 9%;
     font-family: 'Inter';
     font-size: 2.25rem;
 }
 
 .back-next{
+    border: 1px dotted blue;
     display: flex;
     justify-content: space-between;
-    margin: 3% 5%;
+    align-items: center;
+    height: 20%;
+    width: 80%
 }
 
 .back{
     font-size: 1.5rem;
     font-family: 'Inter';
     border-width: 0;
+    height:30%;
     background-color: white;
     color: #7854A6;
+    border: 1px dotted black;
 }
 
 .back:hover{
@@ -140,10 +155,10 @@ select {
     font-size: 1.5rem;
     font-family: 'Inter';
     color: white;
-    padding: 1% 2%;
     border-width: 0;
     background-color: #59A77D;
     border-radius: 4px;
+    height:30%;
 }
 
 .next:hover{
