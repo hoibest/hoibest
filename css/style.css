@@ -54,8 +54,8 @@ header > h1{
 }
 
 .sub-container{
-    border: 1px dotted blue;
-    height: 60%;
+    /*border: 1px dotted blue;*/
+    height: 70%;
     width: 100%;
     display: flex; 
     border-bottom: 1px solid #E2E2E2;
@@ -64,12 +64,12 @@ header > h1{
 
 .symptom-col{
     width: 40%;
-    border:1px dotted red;
+    /*border:1px dotted red;*/
 }
 
 .input-col{
     width: 40%;
-    border: 1px dotted red;
+    /*border: 1px dotted red;*/
 }
 
 .symptom-item{
@@ -109,8 +109,8 @@ select {
 
 
 .greeting{
-    border: 1px dotted blue;
-    height: 20%;
+    /*border: 1px dotted blue;*/
+    height: 15%;
     width:100%;
     display: flex;
     flex-direction: column;
@@ -129,11 +129,11 @@ select {
 }
 
 .back-next{
-    border: 1px dotted blue;
+    /*border: 1px dotted blue;*/
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 20%;
+    height: 15%;
     width: 80%
 }
 
