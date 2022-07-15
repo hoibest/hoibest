@@ -3,8 +3,6 @@
 body{
     margin: 0;
     background-color: #E2E2E2;
-    max-width: 1440px;
-    max-height: 1024px;
     border: 1px solid black;
 }
 
@@ -24,9 +22,9 @@ header > h1{
 }
 
 .container{
-    margin: 4rem 8rem 8rem 6.5rem;
+    margin: 4rem auto;
     display: flex;
-    width: 78%;
+    width: 67%;
     height: 67%
 }
 
@@ -72,7 +70,7 @@ header > h1{
 .symptom-item{
     border-bottom: 1px solid #E2E2E2;
     font-family: 'Inter';
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 400;
     height: 10%;
 }
@@ -88,7 +86,6 @@ header > h1{
 }
 
 .input-item > div {
-    border: 1px dotted red;
     padding-left: 30%;
 }
 
@@ -107,16 +104,16 @@ select {
 
 
 .greeting{
-    margin-top: 37px;
+    margin-top: 5.4%;
 }
 .please{
-    margin: 0px 76px;
+    margin: 0px 9%;
     font-family: 'Poppins';
     font-size: 1.25rem;
 }
 
 .sub-title{
-    margin: 0px 76px;
+    margin: 0px 9%;
     font-family: 'Inter';
     font-size: 2.25rem;
 }
@@ -145,7 +142,7 @@ select {
     font-size: 1.5rem;
     font-family: 'Inter';
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 1% 2%;
     border-width: 0;
     background-color: #59A77D;
     border-radius: 4px;
