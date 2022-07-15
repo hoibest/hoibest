@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Uveitis Diagnosis Application</h1>
+        </header>
+        <div class="container">
+            <div class="navbar-col">
+                <a class="navitem" id="history-el" style="border-left: 10px solid #D9D9D9;">History</a>
+                <a class="navitem" id="antSeg-el" style="border-left: 10px solid #D9D9D9;">Ant. Seg</a>
+                <a class="navitem" id="cornea-el" style="border-left: 10px solid #D9D9D9;">Cornea</a>
+                <a class="navitem" id="postSeg-el" style="border-left: 10px solid #D9D9D9;">Post. Seg</a>
+                <a class="navitem" id="ocularPath-el" style="border-left: 10px solid #D9D9D9;">Ocular Path</a>
+                <a class="navitem" id="exOcularPath-el" style="border-left: 10px solid #D9D9D9;">Ex-Ocular Path</a>
+                <a class="navitem" id="labs-el" style="border-left: 10px solid #D9D9D9;">Labs</a>
+                <a class="navitem" id="results-el" style="border-left: 10px solid #D9D9D9;">Result</a>
+            </div>
+
+
+            <div class="questions-col">
+                <div class="greeting">
+                    <div class="please">Please check all the statement below that appy</div>
+                    <div class="sub-title">History At Presentation</div>
+                </div>
+
+                <div class="sub-container">
+                    <div class="symptom-col">
+                        <div class="symptom-item"><div>Onset</div></div>
+                        <div class="symptom-item"><div>Duration</div></div>
+                        <div class="symptom-item"><div>Course</div></div>
+                        <div class="symptom-item"><div>Acute Course</div></div>
+                        <div class="symptom-item"><div>Eyes Effected</div></div>
+                    </div>
+
+                    <div class="input-col">
+                        <div class="input-item">
+
+                            <div><select id="onset-el">                    
+                                <option value=""></option>
+                                <option value="sudden">Sudden</option>
+                                <option value="insidious">Insidious</option>
+                            </select></div>
+                        </div>
+
+                        <div class="input-item">
+                            <div><select id="onset-el">                    
+                                <option value=""></option>
+                                <option value="sudden">Sudden</option>
+                                <option value="insidious">Insidious</option>
+                            </select></div>
+                        </div>
+
+                        <div class="input-item">
+                            <div><select id="onset-el">                    
+                                <option value=""></option>
+                                <option value="sudden">Sudden</option>
+                                <option value="insidious">Insidious</option>
+                            </select></div>
+                        </div>
+
+                        <div class="input-item">
+                            <div><select id="onset-el">                    
+                                <option value=""></option>
+                                <option value="sudden">Sudden</option>
+                                <option value="insidious">Insidious</option>
+                            </select></div>
+                        </div>
+
+                        <div class="input-item">
+                            <div><select id="onset-el">                    
+                                <option value=""></option>
+                                <option value="sudden">Sudden</option>
+                                <option value="insidious">Insidious</option>
+                            </select></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="back-next">
+                    <button class="back">Back</button>
+                    <button class="next">Next</button>
+                </div>
+            </div>
+                
+            </div>
+        </div>
+    <script>
+        document.getElementById('history-el').style.borderLeftColor = '#59A77D';
+        document.getElementById('history-el').style.fontWeight = 600;
+    </script>
+    </body>
+</html>
