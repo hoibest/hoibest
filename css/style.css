@@ -120,15 +120,16 @@ select {
     padding-bottom: 1%;
 }
 .please{
-    margin: 0 9%;
+    margin: 0 10%;
     font-family: 'Poppins';
-    font-size: 1.25rem;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 .sub-title{
-    margin: 0 9%;
+    margin: 0 10%;
     font-family: 'Inter';
-    font-size: 2.25rem;
+    font-size: 2rem;
 }
 
 .back-next{
@@ -166,4 +167,8 @@ select {
 
 .next:hover{
     background-color: #71ae8e;
+}
+
+@media screen {
+    
 }
