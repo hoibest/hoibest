@@ -60,6 +60,7 @@ header > h1{
     display: flex; 
     border-bottom: 1px solid #E2E2E2;
     justify-content: center;
+    padding-top: 3%;
 }
 
 .symptom-col{
@@ -109,12 +110,14 @@ select {
 
 
 .greeting{
-    /*border: 1px dotted blue;*/
-    height: 15%;
+    height: 14%;
     width:100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
+    align-items: start;
+    border-bottom: 1px solid #E2E2E2;
+    padding-bottom: 1%;
 }
 .please{
     margin: 0 9%;
@@ -144,7 +147,7 @@ select {
     height:30%;
     background-color: white;
     color: #7854A6;
-    border: 1px dotted black;
+    /*border: 1px dotted black;*/
 }
 
 .back:hover{
