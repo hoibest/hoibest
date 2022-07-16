@@ -139,7 +139,7 @@ select {
     justify-content: space-between;
     align-items: center;
     height: 15%;
-    width: 80%
+    width: 80%;
 }
 
 .back{
@@ -157,13 +157,17 @@ select {
 }
 
 .next{
-    font-size: 1.5rem;
-    font-family: 'Inter';
-    color: white;
     border-width: 0;
     background-color: #59A77D;
     border-radius: 4px;
-    height:30%;
+    height:40%;
+}
+
+.next > div{
+    font-size: 1.5rem;
+    font-family: 'Inter';
+    color: white;
+    margin: auto auto;
 }
 
 .next:hover{
