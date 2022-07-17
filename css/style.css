@@ -128,13 +128,13 @@ select {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: end;
     border-bottom: 1px solid #E2E2E2;
 }
 
 .greeting-section{
-    margin: 0 10%;
-    width: 100%;
+    width: 90%;
+    border: 1px dotted blue;
 }
 
 .please{
