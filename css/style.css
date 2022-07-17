@@ -3,8 +3,11 @@
 body{
     margin: 0;
     background-color: #E2E2E2;
-    border: 1px solid black;
-    height:100vh;
+    height:90vh;
+}
+
+footer{
+    height:10vh;
 }
 
 header{
@@ -192,5 +195,9 @@ select {
     }
     .questions-col{
         border-radius: 0;
+    }
+
+    header > h1{
+        font-size: 1rem;
     }
 }
