@@ -4,6 +4,7 @@ body{
     margin: 0;
     background-color: #E2E2E2;
     border: 1px solid black;
+    height:100vh;
 }
 
 header{
@@ -178,6 +179,16 @@ select {
     background-color: #71ae8e;
 }
 
-@media screen {
-    
+@media only screen and (max-width: 600px){
+    .navitem{
+        display:none;
+    }
+    .container{
+        margin: 0;
+        width:100%;
+        height:92vh;
+    }
+    body{
+        
+    }
 }
