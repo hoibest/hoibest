@@ -1,13 +1,20 @@
+.mobile-nav{
+    display: none;
+}
 
+
+html {
+    background-color: #e2983d;
+}
 
 body{
     margin: 0;
-    background-color: #E2E2E2;
+    background-color:  #E2E2E2;
     height:100vh;
 }
 
 header{
-    background-color: #7854A6;
+    background-color:#e64626;
     height: 10%;
     display: flex;
     align-items: center;
@@ -15,7 +22,7 @@ header{
 
 header > h1{
     font-family: 'Roboto', 'sans-serif';
-    color: #E6DFDF;
+    color: white;
     font-size: 1.6rem;
     border: 1px dotted auto;
     padding: 10%;
@@ -153,12 +160,12 @@ select {
     border-width: 0;
     height:30%;
     background-color: white;
-    color: #7854A6;
+    color: #e64626;
     /*border: 1px dotted black;*/
 }
 
 .back:hover{
-    color: #c7b0e6;
+    color: #dd7661;
 }
 
 .next{
@@ -200,4 +207,42 @@ select {
         justify-content: center;
     }
 
+    .mobile-nav{
+        height: 4vh;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background-color: #dd7661;
+    }
+
+    .progress-nav{
+        font-family: 'Roboto', 'sans-serif';
+        margin-left: 10%;
+        display: flex;
+        align-items: center;
+    }
+
+    .progress-bar{
+        width: 30%;
+        margin-right: 10%;
+        display: flex;
+        align-items: center;
+    }
+
+    .bar{
+        background-color: #D9D9D9;
+        width: 100%;
+        height: 30%;
+        border-radius: 10px;
+        display: flex;
+        justify-content: start;
+    }
+
+    .green-bar{
+        background-color: green;
+        height: 100%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        width: 12.5%;
+    }
 }
