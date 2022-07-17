@@ -131,13 +131,12 @@ select {
 .greeting-section{
     margin: 0 10%;
     width: 100%;
+    border: 1px dotted blue;
 }
 
 .please{
-    
     font-family: 'Roboto', 'sans-serif';
     font-size: 0.8em;
-    font-weight: 400;
 }
 
 .sub-title{
@@ -210,7 +209,7 @@ select {
     }
 
     .mobile-nav{
-        height: 6vh;
+        height: 6%;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -255,6 +254,14 @@ select {
 @media only screen and (max-width: 1000px) and (orientation: landscape) {
     .questions-col{
         height: 180%;
+    }
+
+    .mobile-nav{
+        height: 12%;
+    }
+
+    header{
+        height: 20%;
     }
 
     .container{
