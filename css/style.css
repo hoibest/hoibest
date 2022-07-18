@@ -90,6 +90,11 @@ header > h1{
     align-items: center;
 }
 
+.he{
+    padding: 0.2rem;
+    background-image: linear-gradient(pink,rgb(229, 216, 218));
+}
+
 
 
 .input-item{
