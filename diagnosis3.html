@@ -38,8 +38,8 @@
                 <a class="navitem" id="postSeg-el">Post. Seg</a>
                 <a class="navitem" id="ocularPath-el">Ocular Path</a>
                 <a class="navitem" id="exOcularPath-el">Ex-Ocular Path</a>
-                <a class="navitem" id="labs-el">Spots</a>
-                <a class="navitem" id="labs-el">Other Descriptors</a>
+                <a class="navitem" id="spots-el">Spots</a>
+                <a class="navitem" id="spots-el">Imaging</a>
                 <a class="navitem" id="labs-el">Labs</a>
                 <a class="navitem" id="results-el">Result</a>
             </div>
@@ -50,15 +50,13 @@
                 <div class="greeting">
                     <div class="greeting-section">
                         <div class="please">Please select the characteristics in each box below</div>
-                        <div class="sub-title">Other Pertinent Corneal Findings</div>
+                        <div class="sub-title">Other Corneal Findings</div>
                     </div>
                 </div>
 
                 <div class="sub-container">
                     <div class="symptom-col">
-                        <div class="symptom-item"><div>Anterior Chamber Cells</div></div>
-                        <div class="symptom-item"><div>Anterior Chamber Flare</div></div>
-                        <div class="symptom-item"><div>If iris is abnormal</div></div>
+                        <div class="symptom-item"><div>Is iris abnormal?</div></div>
                         <div class="symptom-item"><div>Atrophy</div></div>
                         <div class="symptom-item"><div>Synechiae</div></div>
                         <div class="symptom-item"><div>Heterochromia</div></div>
@@ -68,29 +66,13 @@
 
                     <!--write down input-->
                     <div class="input-col">
-                        <div class="input-item">
-                            <div><select id="antChamberCells-el" onchange="keepData(this)">
-                                <option value=0>0 (Cells in field =< 1)</option>
-                                <option value=1>1 (Cells in field = 1-5)</option>
-                                <option value=2>2 (Cells in field = 6-15)</option>
-                                <option value=3>3 (Cells in field = 16-25)</option>
-                                <option value=4>4 (Cells in field = 26-50)</option>
-                                <option value=5>5 (Cells in field > 50)</option>
-                            </select></div>
-                        </div>
 
                         <div class="input-item">
-                            <div><select id="antChamberFlare-el" onchange="keepData(this)">
-                                <option value=0>0 (None)</option>
-                                <option value=1>1 (Hardly any)</option>
-                                <option value=2>2 (Definite blur but iris details still clear)</option>
-                                <option value=3>3 (Obvious blur with iris details hazy)</option>
-                                <option value=4>4 (Fibrinous flare/plastic acqueuos)</option>
+                            <div><select id="irisAbnormal-el" onchange="two(this)">
+                                <option value=""></option>
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
                             </select></div>
-                        </div>
-
-                        <div class="input-item">
-                            <!--blank-->
                         </div>
 
                         <div class="input-item">
@@ -148,8 +130,42 @@
         document.getElementById('cornea-el').style.borderLeftColor = '#59A77D';
         document.getElementById('cornea-el').style.fontWeight = 600;
         document.getElementById('green-bar').style.width = 30 + "%"; 
-        loadData(['antChamberCells-el','antChamberFlare-el',
-        'irisAtrophy-el','synechiae-el','heterochromia-el','irisNodules-el']);
+        loadData(['irisAbnormal-el','irisAtrophy-el','synechiae-el','heterochromia-el','irisNodules-el']);
+        function two(t){
+            keepData(t);
+            if(document.getElementById('irisAbnormal-el').value!="yes"){
+                document.getElementById('irisAtrophy-el').style.display = "none";
+                document.getElementById('irisAtrophy-el').value = '';
+                document.getElementById('synechiae-el').style.display = "none";
+                document.getElementById('synechiae-el').value = '';
+                document.getElementById('heterochromia-el').style.display = "none";
+                document.getElementById('heterochromia-el').value = '';
+                document.getElementById('irisNodules-el').style.display = "none";
+                document.getElementById('irisNodules-el').value = '';
+            }
+            else{
+                document.getElementById('irisAtrophy-el').style.display = "unset";
+                document.getElementById('synechiae-el').style.display = "unset";
+                document.getElementById('heterochromia-el').style.display = "unset";
+                document.getElementById('irisNodules-el').style.display = "unset";
+            }
+        }
+        if(document.getElementById('irisAbnormal-el').value!="yes"){
+                document.getElementById('irisAtrophy-el').style.display = "none";
+                document.getElementById('irisAtrophy-el').value = '';
+                document.getElementById('synechiae-el').style.display = "none";
+                document.getElementById('synechiae-el').value = '';
+                document.getElementById('heterochromia-el').style.display = "none";
+                document.getElementById('heterochromia-el').value = '';
+                document.getElementById('irisNodules-el').style.display = "none";
+                document.getElementById('irisNodules-el').value = '';
+            }
+            else{
+                document.getElementById('irisAtrophy-el').style.display = "unset";
+                document.getElementById('synechiae-el').style.display = "unset";
+                document.getElementById('heterochromia-el').style.display = "unset";
+                document.getElementById('irisNodules-el').style.display = "unset";
+            }
     </script>
     </body>
 </html>

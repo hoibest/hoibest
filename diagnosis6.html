@@ -38,8 +38,8 @@
                 <a class="navitem" id="postSeg-el">Post. Seg</a>
                 <a class="navitem" id="ocularPath-el">Ocular Path</a>
                 <a class="navitem" id="exOcularPath-el">Ex-Ocular Path</a>
-                <a class="navitem" id="labs-el">Spots</a>
-                <a class="navitem" id="labs-el">Other Descriptors</a>
+                <a class="navitem" id="spots-el">Spots</a>
+                <a class="navitem" id="spots-el">Imaging</a>
                 <a class="navitem" id="labs-el">Labs</a>
                 <a class="navitem" id="results-el">Result</a>
             </div>
@@ -61,6 +61,7 @@
                         <div class="symptom-item"><div>RF Negative Polyarthritis</div></div>
                         <div class="symptom-item"><div>Juvenile Psoriatic Arthritis</div></div>
                         <div class="symptom-item"><div>ASAS-defined Spondyloarthritis</div></div>
+                        <div class="symptom-item"><div>Multiple Sclerosis</div></div>
                     </div>
                 
 
@@ -106,6 +107,13 @@
                             </select></div>
                         </div>
 
+                        <div class="input-item">
+                            <div><select id="multipleSclerosis-el" onchange="keepData(this)">
+                                <option value=""></option>
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></div>
+                        </div>
                     </div>
                 </div>
 
@@ -113,7 +121,7 @@
                     <a style="text-decoration: none;" href="diagnosis5.html">
                         <button class="back">Back</button>
                     </a>
-                    <a style="text-decoration: none;" href="diagnosis9.html">
+                    <a style="text-decoration: none;" href="diagnosis7.html">
                         <button class="next"><div>Next</div></button>
                     </a>
                 </div>
@@ -132,7 +140,7 @@
         document.getElementById('exOcularPath-el').style.fontWeight = 600;
         document.getElementById('green-bar').style.width = 60 + "%"; 
         loadData(['dermatomalHerpesZoster-el','oligoarthritis-el','rfNegativePolyarthritis-el',
-        'juvenilePsoriaticArthritis-el','asasDefinedSpondyloarthritis-el']);
+        'juvenilePsoriaticArthritis-el','asasDefinedSpondyloarthritis-el','multipleSclerosis-el']);
     </script>
     </body>
 </html>
