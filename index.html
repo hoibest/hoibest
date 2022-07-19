@@ -72,8 +72,19 @@
                         </div>
 
                         <div class="input-item">
-                            <div><input type="number" id="age-el" onchange="keepData(this)">                    
-                            </input></div>
+                            <div><select id="age-el" onchange="keepData(this)">                    
+                                <option value=""></option>
+                                <option value="0-10">0-10</option>
+                                <option value="10-20">10-20</option>
+                                <option value="20-30">20-30</option>
+                                <option value="30-40">30-40</option>
+                                <option value="40-50">40-50</option>
+                                <option value="50-60">50-60</option>
+                                <option value="60-70">60-70</option>
+                                <option value="70-80">70-80</option>
+                                <option value="80-90">80-90</option>
+                                <option value="90-100">90-100</option>
+                            </select></div>
                         </div>
 
                         <div class="input-item" style="align-items: end;"><span class='write' id="selectedLoc-el"></span></div>
@@ -82,7 +93,7 @@
 
                 <div class="back-next">
                     <a style="text-decoration: none;" onclick="sessionStorage.clear();">
-                        <button class="back""><div>Restart</div></button>
+                        <button class="back"><div>Restart</div></button>
                     </a>
                     <a style="text-decoration: none;" href="diagnosis1.html">
                         <button class="next"><div>Next</div></button>
