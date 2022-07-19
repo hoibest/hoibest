@@ -90,10 +90,10 @@ header > h1{
     align-items: center;
 }
 
-.he{
+/*.he{
     padding: 0.2rem;
     background-image: linear-gradient(pink,rgb(229, 216, 218));
-}
+}*/
 
 
 
@@ -128,7 +128,6 @@ select {
 .write{
     width: 70%;
     max-height: 100%;
-    border-radius: 5px;
     border-width: 0;
     font-size: 0.88rem;
     font-family: 'Inter';

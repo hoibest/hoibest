@@ -57,12 +57,11 @@
                     <div class="symptom-col">
                         <div class="symptom-item"><div>Anatomic Location</div></div>
                         <div class="symptom-item"><div>Age</div></div>
-                        <div class="symptom-item">You have selected :</div>
                     </div>
 
                     <div class="input-col">
                         <div class="input-item">
-                            <div><select id="anatomicLocation-el" onchange="twoFunc(this)">                    
+                            <div><select id="anatomicLocation-el" onchange="keepData(this)">                    
                                 <option value=""></option>
                                 <option value="anterior">Anterior</option>
                                 <option value="intermediate">Intermediate</option>
@@ -86,13 +85,11 @@
                                 <option value="90-100">90-100</option>
                             </select></div>
                         </div>
-
-                        <div class="input-item" style="align-items: end;"><span class='write' id="selectedLoc-el"></span></div>
                     </div>
                 </div>
 
                 <div class="back-next">
-                    <a style="text-decoration: none;" onclick="sessionStorage.clear();">
+                    <a style="text-decoration: none;" onclick="sessionStorage.clear(); loadData(['anatomicLocation-el','age-el']);">
                         <button class="back"><div>Restart</div></button>
                     </a>
                     <a style="text-decoration: none;" href="diagnosis1.html">
@@ -106,24 +103,7 @@
     <script src="loading.js"></script>
     <script>
         document.getElementById('green-bar').style.width = 0 + "%"; 
-        function twoFunc(t){
-            keepData(t);
-            info(t);
-        }
-        function info(t){
-            let loc = document.getElementById(t);
-            console.log(t.value);
-            let selectedLoc = document.getElementById('selectedLoc-el');
-            let selectedColor = document.getElementById('selectedColor-el');
-            if(t.value=='anterior'){
-                selectedLoc.textContent = 'anterior uveitis';
-                selectedLoc.style.backgroundImage = 'linear-gradient(pink,rgb(229, 216, 218))';
-            }
-            else{
-                selectedLoc.textContent = '';
-                selectedColor.textContent = '';
-            }
-        }
+        loadData(['anatomicLocation-el','age-el'])
     </script>
     </body>
 </html>

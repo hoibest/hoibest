@@ -56,18 +56,28 @@
 
                 <div class="sub-container">
                     <div class="symptom-col">
+                        <div class="symptom-item"><div>Vitritis</div></div>
                         <div class="symptom-item"><div>Vitreous Cells</div></div>
                         <div class="symptom-item"><div>Vitreous Haze</div></div>
                         <div class="symptom-item"><div>Retinal Vascular Changes</div></div>
-                        <div class="symptom-item"><div>Snowballs</div></div>
-                        <div class="symptom-item"><div>Snowbanks</div></div>
+                        <div class="symptom-item"><div>Vitreous Snowballs</div></div>
+                        <div class="symptom-item"><div>Pars Plana Snowbanks</div></div>
                     </div>
                 
 
                     <!--write down input-->
                     <div class="input-col">
                         <div class="input-item">
+                            <div><select id="vitritis-el" onchange="keepData(this)">
+                                <option value=""></option>
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></div>
+                        </div>
+
+                        <div class="input-item">
                             <div><select id="vitCells-el" onchange="keepData(this)">
+                                <option value=""></option>
                                 <option value="no">No</option>
                                 <option value="yes">Yes</option>
                             </select></div>
@@ -85,10 +95,10 @@
                         </div>
 
                         <div class="input-item">
-                            <div><select id="retinalVascularChange-el" onchange="keepData(this)">
+                            <div><select id="retVasChange-el" onchange="keepData(this)">
                                 <option value=""></option>
-                                <option value="retinalVascularSheathing">Peripheral Vasculitis with Sheathing</option>
-                                <option value="retinalVascularOcclusion">Retinal Vascular Occlusion</option>
+                                <option value="retVasSheathing">Peripheral Vasculitis with Sheathing</option>
+                                <option value="retlVasOcclusion">Retinal Vascular Occlusion</option>
                             </select></div>
                         </div>
 
@@ -131,8 +141,8 @@
         document.getElementById('postSeg-el').style.borderLeftColor = '#59A77D';
         document.getElementById('postSeg-el').style.fontWeight = 600;
         document.getElementById('green-bar').style.width = 40 + "%"; 
-        loadData(['vitCells-el','vitHaze-el','retinalVascularChange-el',
-        'snowbanks-el','snowbanks-el']);
+        loadData(['vitritis-el','vitCells-el','vitHaze-el','retVasChange-el',
+        'snowballs-el','snowbanks-el']);
     </script>
     </body>
 </html>

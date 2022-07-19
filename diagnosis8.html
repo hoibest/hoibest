@@ -68,31 +68,31 @@
                         <div class="input-item">
                             <div><select id="fa-el" onchange="keepData(this)">
                                 <option value=""></option>
-                                <option value="no">Hypofluorescent</option>
-                                <option value="yes">Hyperfluorescent</option>
+                                <option value="hypo">Hypofluorescent</option>
+                                <option value="hyper">Hyperfluorescent</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                             <div><select id="faDes-el" onchange="keepData(this)">
                                 <option value=""></option>
-                                <option value="no">Wreath-like</option>
-                                <option value="yes">Diffuse</option>
+                                <option value="wreath">Wreath-like</option>
+                                <option value="diffuse">Diffuse</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                             <div><select id="oct-el" onchange="keepData(this)">
                                 <option value=""></option>
-                                <option value="paucifocal">Hyperreflective lesions*</option>
-                                <option value="multifocal">Septae</option>
+                                <option value="hyperreflective">Hyperreflective lesions*</option>
+                                <option value="septae">Septae</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                             <div><select id="faf-el" onchange="keepData(this)">
                                 <option value=""></option>
-                                <option value="no">Hypo-autofluorescent lesions with hyper autofluorescent borders</option>
+                                <option value="hypo">Hypo-autofluorescent lesions with hyper autofluorescent borders</option>
                             </select></div>
                         </div>
 
@@ -125,6 +125,7 @@
         document.getElementById('imaging-el').style.borderLeftColor = '#59A77D';
         document.getElementById('imaging-el').style.fontWeight = 600;
         document.getElementById('green-bar').style.width = 80 + "%"; 
+        loadData(['fa-el','faDes-el','oct-el','faf-el']);
     </script>
     </body>
 </html>
