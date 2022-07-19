@@ -125,6 +125,27 @@ select {
 }
 
 
+.write{
+    width: 70%;
+    max-height: 50%;
+    border-radius: 5px;
+    border-width: 0;
+    font-size: 0.88rem;
+    font-family: 'Inter';
+    text-align: center;  
+}
+
+input {
+    width: 100%;
+    max-height: 120%;
+    border-radius: 5px;
+    border-width: 0;
+    background-color: #D9D9D9;
+    font-size: 0.88rem;
+    font-family: 'Inter'
+}
+
+
 
 
 .greeting{
@@ -174,7 +195,7 @@ select {
     color: #f3c1b8;
 }
 
-.next{
+.next, .restart{
     border-width: 0;
     background-color: #59A77D;
     border-radius: 4px;
@@ -184,7 +205,7 @@ select {
     align-items: center;
 }
 
-.next > div{
+.next > div, .restart > div {
     font-size: 1.2em;
     font-family: 'Inter';
     color: white;
@@ -192,6 +213,10 @@ select {
 
 .next:hover{
     background-color: #71ae8e;
+}
+
+.restart:hover{
+    background-color: #8e6466;
 }
 
 @media only screen and (max-width: 1000px){
