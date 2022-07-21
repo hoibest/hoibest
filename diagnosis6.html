@@ -1,4 +1,4 @@
-<!--Posterior Segment Findings-->
+<!--Spots Findings-->
 
 <html>
     <head>
@@ -21,7 +21,7 @@
             <div class="progress-nav">
                 <div>
                     <!--Write Navigation-->
-                    6/10 Ex-Ocular Path
+                    6/10 Posterior Spots
                 </div>
             </div>
             <div class="progress-bar">
@@ -36,7 +36,6 @@
                 <a class="navitem" id="antSeg-el">Ant. Seg</a>
                 <a class="navitem" id="cornea-el">Cornea</a>
                 <a class="navitem" id="postSeg-el">Post. Seg</a>
-                <a class="navitem" id="ocularPath-el">Ocular Path</a>
                 <a class="navitem" id="exOcularPath-el">Ex-Ocular Path</a>
                 <a class="navitem" id="spots-el">Spots</a>
                 <a class="navitem" id="spots-el">Imaging</a>
@@ -50,25 +49,27 @@
                 <div class="greeting">
                     <div class="greeting-section">
                         <div class="please">Please select the characteristics in each box below</div>
-                        <div class="sub-title">Extra-Ocular Pathology</div>
+                        <div class="sub-title">Spots</div>
                     </div>
                 </div>
 
                 <div class="sub-container">
                     <div class="symptom-col">
-                        <div class="symptom-item"><div>Dermatomal Herpes Zoster</div></div>
-                        <div class="symptom-item"><div>Oligoarthritis</div></div>
-                        <div class="symptom-item"><div>RF Negative Polyarthritis</div></div>
-                        <div class="symptom-item"><div>Juvenile Psoriatic Arthritis</div></div>
-                        <div class="symptom-item"><div>ASAS-defined Spondyloarthritis</div></div>
-                        <div class="symptom-item"><div>Multiple Sclerosis</div></div>
+                        <div class="symptom-item"><div>Choroiditis</div></div>
+                        <div class="symptom-item"><div>Retinitis</div></div>
+                        <div class="symptom-item"><div>Focal</div></div>
+                        <div class="symptom-item"><div>Color</div></div>
+                        <div class="symptom-item"><div>Shape</div></div>
+                        <div class="symptom-item"><div>Predominant Lesion Size</div></div>
+                        <div class="symptom-item"><div>Location in Retina</div></div>
+                        <div class="symptom-item"><div>Other Spot Descriptors</div></div>
                     </div>
                 
 
                     <!--write down input-->
                     <div class="input-col">
                         <div class="input-item">
-                            <div><select id="dermatomalHerpesZoster-el" onchange="keepData(this)">
+                            <div><select id="choroiditis-el" onchange="keepData(this)">
                                 <option value=""></option>
                                 <option value="no">No</option>
                                 <option value="yes">Yes</option>
@@ -76,7 +77,7 @@
                         </div>
 
                         <div class="input-item">
-                            <div><select id="oligoarthritis-el" onchange="keepData(this)">
+                            <div><select id="retinitis-el" onchange="keepData(this)">
                                 <option value=""></option>
                                 <option value="no">No</option>
                                 <option value="yes">Yes</option>
@@ -84,36 +85,57 @@
                         </div>
 
                         <div class="input-item">
-                            <div><select id="rfNegativePolyarthritis-el" onchange="keepData(this)">
+                            <div><select id="focal-el" onchange="keepData(this)">
                                 <option value=""></option>
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
+                                <option value="paucifocal">Paucifocal</option>
+                                <option value="multifocal">Multifocal</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
-                            <div><select id="juvenilePsoriaticArthritis-el" onchange="keepData(this)">
+                            <div><select id="color-el" onchange="keepData(this)">
                                 <option value=""></option>
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
+                                <option value="yellow-orange">Yellow-orange (cream-coloured)</option>
+                                <option value="grey-white">Grey-white</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
-                            <div><select id="asasDefinedSpondyloarthritis-el" onchange="keepData(this)">
+                            <div><select id="shape-el" onchange="keepData(this)">
                                 <option value=""></option>
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
+                                <option value="placoid">Plaque-like or placoid</option>
+                                <option value="oval">oval or round</option>
+                                <option value="punctuate">Punctuate lesion</option>
+                                <option value="serpentine">Ameboid or Serpentine shape</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
-                            <div><select id="multipleSclerosis-el" onchange="keepData(this)">
+                            <div><select id="size-el" onchange="keepData(this)">
                                 <option value=""></option>
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
+                                <option value="less125">> 125μm</option>
+                                <option value="bw125and250">> 125μm and < 250μm </option>
+                                <option value="more250">> 250μm </option>
                             </select></div>
                         </div>
+
+                        <div class="input-item">
+                            <div><select id="locationRetina-el" onchange="keepData(this)">
+                                <option value=""></option>
+                                <option value="pp">posterior pole</option>
+                                <option value="mp">mid-periphery</option>
+                                <option value="fp">Far periphery</option>
+                            </select></div>
+                        </div>
+
+                        <div class="input-item">
+                            <div><select id="otherDes-el" onchange="keepData(this)">
+                                <option value=""></option>
+                                <option value="fg">foveal granularity</option>
+                                <option value="punched-out">Punched-out atrophic</option>
+                            </select></div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -136,12 +158,12 @@
         document.getElementById('antSeg-el').style.borderLeftColor = '#59A77D';
         document.getElementById('cornea-el').style.borderLeftColor = '#59A77D';
         document.getElementById('postSeg-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('ocularPath-el').style.borderLeftColor = '#59A77D';
         document.getElementById('exOcularPath-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('exOcularPath-el').style.fontWeight = 600;
+        document.getElementById('spots-el').style.borderLeftColor = '#59A77D';
+        document.getElementById('spots-el').style.fontWeight = 600;
         document.getElementById('green-bar').style.width = 60 + "%"; 
-        loadData(['dermatomalHerpesZoster-el','oligoarthritis-el','rfNegativePolyarthritis-el',
-        'juvenilePsoriaticArthritis-el','asasDefinedSpondyloarthritis-el','multipleSclerosis-el']);
+        loadData(['choroiditis-el','retinitis-el','focal-el',
+        'color-el','shape-el','size-el','locationRetina-el','otherDes-el']);
     </script>
     </body>
 </html>

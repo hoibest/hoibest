@@ -214,7 +214,6 @@ function fus_rule_3(){
 }
 
 function fus_rule_4(){
-    console.log("hi");
     if(p.ENDOTHELIITIS!="yes" && p.ENDO_LESION!="yes"){
         antSatList.push('fus_rule_4');
         return true;

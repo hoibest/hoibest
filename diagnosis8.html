@@ -1,4 +1,4 @@
-<!--Imaging Findings-->
+<!--Labs Findings-->
 
 <html>
     <head>
@@ -21,7 +21,7 @@
             <div class="progress-nav">
                 <div>
                     <!--Write Navigation-->
-                    8/10 Imaging
+                    8/10 Labs
                 </div>
             </div>
             <div class="progress-bar">
@@ -36,7 +36,6 @@
                 <a class="navitem" id="antSeg-el">Ant. Seg</a>
                 <a class="navitem" id="cornea-el">Cornea</a>
                 <a class="navitem" id="postSeg-el">Post. Seg</a>
-                <a class="navitem" id="ocularPath-el">Ocular Path</a>
                 <a class="navitem" id="exOcularPath-el">Ex-Ocular Path</a>
                 <a class="navitem" id="spots-el">Spots</a>
                 <a class="navitem" id="imaging-el">Imaging</a>
@@ -50,63 +49,98 @@
                 <div class="greeting">
                     <div class="greeting-section">
                         <div class="please">Please select the characteristics in each box below</div>
-                        <div class="sub-title">Imaging</div>
+                        <div class="sub-title">Labs</div>
                     </div>
                 </div>
 
                 <div class="sub-container">
                     <div class="symptom-col">
-                        <div class="symptom-item"><div>Fluorescein angiography</div></div>
-                        <div class="symptom-item"><div>FA Descriptors</div></div>
-                        <div class="symptom-item"><div>OCT</div></div>
-                        <div class="symptom-item"><div>FAF</div></div>
+                        <div class="symptom-item"><div>CMV PCR</div></div>
+                        <div class="symptom-item"><div>HSV PCR</div></div>
+                        <div class="symptom-item"><div>VZV PCR</div></div>
+                        <div class="symptom-item"><div>HLA-B27</div></div>
+                        <div class="symptom-item"><div>Renal Biopsy</div></div>
+                        <div class="symptom-item"><div>Urine β-microglobulin</div></div>
+                        <div class="symptom-item"><div>Urine Analysis</div></div>
+                        <div class="symptom-item"><div>Serum Creatinine</div></div>
                     </div>
                 
 
                     <!--write down input-->
                     <div class="input-col">
                         <div class="input-item">
-                            <div><select id="fa-el" onchange="keepData(this)">
+                            <div><select id="posPcrCmv-el" onchange="keepData(this)">
                                 <option value=""></option>
-                                <option value="hypo">Hypofluorescent</option>
-                                <option value="hyper">Hyperfluorescent</option>
+                                <option value="no">Negative</option>
+                                <option value="yes">Positive</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
-                            <div><select id="faDes-el" onchange="keepData(this)">
+                            <div><select id="posPcrHsv-el" onchange="keepData(this)">
                                 <option value=""></option>
-                                <option value="wreath">Wreath-like</option>
-                                <option value="diffuse">Diffuse</option>
+                                <option value="no">Negative</option>
+                                <option value="yes">Positive</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
-                            <div><select id="oct-el" onchange="keepData(this)">
+                            <div><select id="posPcrVzv-el" onchange="keepData(this)">
                                 <option value=""></option>
-                                <option value="hyperreflective">Hyperreflective lesions*</option>
-                                <option value="septae">Septae</option>
+                                <option value="no">Negative</option>
+                                <option value="yes">Positive</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
-                            <div><select id="faf-el" onchange="keepData(this)">
+                            <div><select id="posHlaB27-el" onchange="keepData(this)">
                                 <option value=""></option>
-                                <option value="hypo">Hypo-autofluorescent lesions with hyper autofluorescent borders</option>
+                                <option value="no">Negative</option>
+                                <option value="yes">Positive</option>
                             </select></div>
                         </div>
 
-                        
+                        <div class="input-item">
+                            <div><select id="posRenalBiopsy-el" onchange="keepData(this)">
+                                <option value=""></option>
+                                <option value="no">Negative</option>
+                                <option value="yes">Positive</option>
+                            </select></div>
+                        </div>
+
+                        <div class="input-item">
+                            <div> <select id="elevatedUrineBM-el" onchange="keepData(this)">
+                                <option value=""></option>
+                                <option value="no">Normal</option>
+                                <option value="yes">Elevated</option>
+                            </select></div>
+                        </div>
+
+                        <div class="input-item">
+                            <div><select id="abnormalUrineAn-el" onchange="keepData(this)">
+                                <option value=""></option>
+                                <option value="no">Normal</option>
+                                <option value="yes">Abnormal</option>
+                            </select></div>
+                        </div>
+
+                        <div class="input-item">
+                            <div><select id="eleavtedSerumCr-el" onchange="keepData(this)">
+                                <option value=""></option>
+                                <option value="no">Normal</option>
+                                <option value="yes">Elevated</option>
+                            </select></div>
+                        </div>
+
                     </div>
                 </div>
-                
 
                 <div class="back-next">
                     <a style="text-decoration: none;" href="diagnosis7.html">
                         <button class="back">Back</button>
                     </a>
-                    <a style="text-decoration: none;" href="diagnosis9.html">
-                        <button class="next"><div>Next</div></button>
+                    <a style="text-decoration: none;" href="result.html">
+                        <button onclick="patient.patientUpdate();" class="next"><div>Next</div></button>
                     </a>
                 </div>
             </div>
@@ -120,13 +154,15 @@
         document.getElementById('antSeg-el').style.borderLeftColor = '#59A77D';
         document.getElementById('cornea-el').style.borderLeftColor = '#59A77D';
         document.getElementById('postSeg-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('ocularPath-el').style.borderLeftColor = '#59A77D';
         document.getElementById('exOcularPath-el').style.borderLeftColor = '#59A77D';
         document.getElementById('spots-el').style.borderLeftColor = '#59A77D';
+        document.getElementById('labs-el').style.borderLeftColor = '#59A77D';
         document.getElementById('imaging-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('imaging-el').style.fontWeight = 600;
+        document.getElementById('labs-el').style.fontWeight = 600;
         document.getElementById('green-bar').style.width = 80 + "%"; 
-        loadData(['fa-el','faDes-el','oct-el','faf-el']);
+        loadData(['posPcrCmv-el','posPcrHsv-el','posHlaB27-el',
+        'posRenalBiopsy-el','elevatedUrineBM-el',"abnormalUrineAn-el",
+        "eleavtedSerumCr-el"]);
     </script>
     </body>
 </html>
