@@ -58,6 +58,7 @@
                     <div class="symptom-col">
                         <div class="symptom-item"><div>CMV PCR</div></div>
                         <div class="symptom-item"><div>HSV PCR</div></div>
+                        <div class="symptom-item"><div>VZV PCR</div></div>
                         <div class="symptom-item"><div>HLA-B27</div></div>
                         <div class="symptom-item"><div>Renal Biopsy</div></div>
                         <div class="symptom-item"><div>Urine β-microglobulin</div></div>
@@ -78,6 +79,14 @@
 
                         <div class="input-item">
                             <div><select id="posPcrHsv-el" onchange="keepData(this)">
+                                <option value=""></option>
+                                <option value="no">Negative</option>
+                                <option value="yes">Positive</option>
+                            </select></div>
+                        </div>
+
+                        <div class="input-item">
+                            <div><select id="posPcrVzv-el" onchange="keepData(this)">
                                 <option value=""></option>
                                 <option value="no">Negative</option>
                                 <option value="yes">Positive</option>
@@ -132,7 +141,7 @@
                         <button class="back">Back</button>
                     </a>
                     <a style="text-decoration: none;" href="result.html">
-                        <button class="next"><div>Next</div></button>
+                        <button onclick="patient.patientUpdate();" class="next"><div>Next</div></button>
                     </a>
                 </div>
             </div>
@@ -140,6 +149,7 @@
             
         </div>
     <script src="loading.js"></script>
+    <script src="./javascript/patient.js"></script>
     <script>
         document.getElementById('history-el').style.borderLeftColor = '#59A77D';
         document.getElementById('antSeg-el').style.borderLeftColor = '#59A77D';

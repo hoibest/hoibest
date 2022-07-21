@@ -1,0 +1,47 @@
+const p = JSON.parse(sessionStorage.patient);
+
+/*const all long terminology*/
+export const COURSE = p.courseObj.course;
+export const ACUTE_COURSE = p.courseObj.acuteCourse; 
+export const DURATION = p.durationObj.duration;
+export const ONSET = p.onsetObj.onset;
+export const LATERALITY = p.lateralityObj.laterality;
+export const AGE = p.age;
+export const ANT_CHAMBER_CELLS = p.ocularFindingObj.antChamberCells;
+export const ANT_CHAMBER_FLARE = p.ocularFindingObj.antChamberFlare;
+export const KP = p.ocularFindingObj.keraticPrecipitate;
+export const KP_LOC = p.ocularFindingObj.precipitateLocation;
+export const IRIS_ATROPHY = p.ocularFindingObj.irisAtrophy;
+export const SYNECHIAE = p.ocularFindingObj.synechiae;
+export const HETEROCHROMIA = p.ocularFindingObj.heterochromia;
+export const IRIS_NODULES = p.ocularFindingObj.irisNodules;
+export const ENDO_LESION = p.ocularFindingObj.endoLesion;
+export const RET_VAS_CHANGE = p.ocularFindingObj.retinalVascularChange;
+export const SNOWBALLS = p.ocularFindingObj.snowballs;
+export const SNOWBANKS = p.ocularFindingObj.snowbanks;
+export const VIT_CELLS = p.ocularFindingObj.vitCells;
+export const VIT_HAZE = p.ocularFindingObj.vitHaze;
+export const CHOROIDITIS = p.ocPathObj.choroiditis;
+export const ENDOTHELIITIS = p.ocPathObj.endotheliitis;
+export const HERPES_SIMPLEX_KERATITIS = p.ocPathObj.herpesSimplexKeratitis;
+export const RETINITIS = p.ocPathObj.retinitis;
+export const VITRITIS = p.ocPathObj.vitritis;
+export const SPONDYLOARTHRITIS = p.exOcPathObj.asasDefinedSpondyloarthritis;
+export const DERM_HERPES_ZOSTER = p.exOcPathObj.dermatomalHerpesZoster;
+export const JUVENILE_PSORIATIC_ARTHRITIS = p.exOcPathObj.juvenilePsoriaticArthritis;
+export const OLIGOARTHRITIS = p.exOcPathObj.oligoarthritis;
+export const RF_NEG_POLYARTHRITIS = p.exOcPathObj.rfNegativePolyarthritis;
+export const MS = p.exOcPathObj.ms;
+export const FA = p.imagingObj.fa;
+export const FA_DES = p.imagingObj.faDes;
+export const FAF = p.imagingObj.faf;
+export const OCT = p.imagingObj.oct;
+export const AB_URINE_AN = p.labFindingObj.abnormalUrineAn;
+export const EL_SERUM_CR = p.labFindingObj.elevatedSerumCr;
+export const EL_URINE_BM = p.labFindingObj.elevatedUrineBM;
+export const POS_HLA_B27 = p.labFindingObj.posHlaB27;
+export const POS_PCR_CMV = p.labFindingObj.posPcrCmv;
+export const POS_PCR_VZV = p.labFindingObj.posPcrVzv;
+export const POS_PCR_HSV = p.labFindingObj.posPcrHsv;
+export const POS_RENAL_BIOPSY = p.labFindingObj.posRenalBiopsy;
+

@@ -55,11 +55,11 @@
                 </div>
 
                 <div class="sub-container">
-                    <div id="report-el" style="width: 80%; word-wrap: break-word">Diagnosis : <span id="diagnosis-el">undifferentiated uveitis</span>
+                    <div id="report-el" style="width: 80%;   word-wrap: break-word">Diagnosis : <span id="diagnosis-el">undifferentiated uveitis</span>
                         <br><br>
                         Ruled-in criteria : <span id="ruled-in"></span>
                         <br><br>
-                        Ruled-out criteria : <span id = 'ruled-out'></span>
+                        <!--Ruled-out criteria : <span id = 'ruled-out'></span>-->
                     </div>
                 </div>
 
@@ -76,6 +76,8 @@
             
         </div>
     <script src="loading.js"></script>
+    <script type="module" src="./javascript/terms.js"></script>
+    <script type="module" src="./javascript/antRule.js"></script>
     <script>
         document.getElementById('history-el').style.borderLeftColor = '#59A77D';
         document.getElementById('antSeg-el').style.borderLeftColor = '#59A77D';

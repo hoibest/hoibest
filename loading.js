@@ -5,10 +5,6 @@ function loadData(arr){
     }
 }
 
-
-
-
-
 function keepData(el){
     let id = el.id;
     let val = document.getElementById(id).value;

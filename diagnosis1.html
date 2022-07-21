@@ -122,6 +122,7 @@
             
         </div>
     <script src="loading.js"></script>
+    <script src="./javascript/patient.js"></script>
     <script>
         document.getElementById('history-el').style.borderLeftColor = '#59A77D';
         document.getElementById('history-el').style.fontWeight = 600;
@@ -131,6 +132,7 @@
             if(document.getElementById('course-el').value!="acute"){
                 document.getElementById('acuteCourse-el').style.display = "none";
                 document.getElementById('acuteCourse-el').value = '';
+                keepData(document.getElementById('acuteCourse-el'));
             }
             else{
                 document.getElementById('acuteCourse-el').style.display = "unset";
@@ -139,6 +141,7 @@
         if(document.getElementById('course-el').value!="acute"){
                 document.getElementById('acuteCourse-el').style.display = "none";
                 document.getElementById('acuteCourse-el').value = '';
+                keepData(document.getElementById('acuteCourse-el'));
         } else{
                 document.getElementById('acuteCourse-el').style.display = "unset";
         }

@@ -56,11 +56,10 @@
 
                 <div class="sub-container">
                     <div class="symptom-col">
-                        <div class="symptom-item"><div>Is iris abnormal?</div></div>
-                        <div class="symptom-item"><div>Atrophy</div></div>
+                        <div class="symptom-item"><div>Iris Atrophy</div></div>
                         <div class="symptom-item"><div>Synechiae</div></div>
                         <div class="symptom-item"><div>Heterochromia</div></div>
-                        <div class="symptom-item"><div>Nodules</div></div>
+                        <div class="symptom-item"><div>Iris Nodules</div></div>
                         <div class="symptom-item"><div>Endotheliitis</div></div>
                         <div class="symptom-item"><div>Nodular, coin-shaped endothelial lesions</div></div>
                         <div class="symptom-item"><div>Herpes Simplex Keratitis</div></div>
@@ -69,15 +68,6 @@
 
                     <!--write down input-->
                     <div class="input-col">
-
-                        <div class="input-item">
-                            <div><select id="irisAbnormal-el" onchange="two(this)">
-                                <option value=""></option>
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
-                            </select></div>
-                        </div>
-
                         <div class="input-item">
                             <div><select id="irisAtrophy-el" onchange="keepData(this)">
                                 <option value=""></option>
@@ -151,49 +141,15 @@
             
         </div>
     <script src="loading.js"></script>
+    <script src="./javascript/patient.js"></script>
     <script>
         document.getElementById('history-el').style.borderLeftColor = '#59A77D';
         document.getElementById('antSeg-el').style.borderLeftColor = '#59A77D';
         document.getElementById('cornea-el').style.borderLeftColor = '#59A77D';
         document.getElementById('cornea-el').style.fontWeight = 600;
         document.getElementById('green-bar').style.width = 30 + "%"; 
-        loadData(['irisAbnormal-el','irisAtrophy-el','synechiae-el','heterochromia-el','irisNodules-el',
+        loadData(["irisAtrophy-el","synechiae-el",'heterochromia-el','irisNodules-el',
         'endotheliitis-el','endoLesion-el','herpesSimplexKeratitis-el']);
-        function two(t){
-            keepData(t);
-            if(document.getElementById('irisAbnormal-el').value!="yes"){
-                document.getElementById('irisAtrophy-el').style.display = "none";
-                document.getElementById('irisAtrophy-el').value = '';
-                document.getElementById('synechiae-el').style.display = "none";
-                document.getElementById('synechiae-el').value = '';
-                document.getElementById('heterochromia-el').style.display = "none";
-                document.getElementById('heterochromia-el').value = '';
-                document.getElementById('irisNodules-el').style.display = "none";
-                document.getElementById('irisNodules-el').value = '';
-            }
-            else{
-                document.getElementById('irisAtrophy-el').style.display = "unset";
-                document.getElementById('synechiae-el').style.display = "unset";
-                document.getElementById('heterochromia-el').style.display = "unset";
-                document.getElementById('irisNodules-el').style.display = "unset";
-            }
-        }
-        if(document.getElementById('irisAbnormal-el').value!="yes"){
-                document.getElementById('irisAtrophy-el').style.display = "none";
-                document.getElementById('irisAtrophy-el').value = '';
-                document.getElementById('synechiae-el').style.display = "none";
-                document.getElementById('synechiae-el').value = '';
-                document.getElementById('heterochromia-el').style.display = "none";
-                document.getElementById('heterochromia-el').value = '';
-                document.getElementById('irisNodules-el').style.display = "none";
-                document.getElementById('irisNodules-el').value = '';
-            }
-            else{
-                document.getElementById('irisAtrophy-el').style.display = "unset";
-                document.getElementById('synechiae-el').style.display = "unset";
-                document.getElementById('heterochromia-el').style.display = "unset";
-                document.getElementById('irisNodules-el').style.display = "unset";
-            }
     </script>
     </body>
 </html>
