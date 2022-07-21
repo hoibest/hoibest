@@ -58,7 +58,6 @@
                         <div class="symptom-item"><div class="he">Anterior Chamber Cells</div></div>
                         <div class="symptom-item"><div class="he">Anterior Chamber Flare</div></div>
                         <div class="symptom-item"><div>Keratic Precipitates</div></div>
-                        <div class="symptom-item"><div>Precipitate Location</div></div>
                     </div>
                 
 
@@ -93,12 +92,7 @@
                             </select></div>
                         </div>
 
-                        <div class="input-item">
-                            <div><select id="kPLoc-el" onchange="keepData(this)">
-                                <option value=""></option>
-                                <option value="diffuse">Diffuse</option>
-                            </select></div>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -124,7 +118,7 @@
         document.getElementById('antSeg-el').style.borderLeftColor = '#59A77D';
         document.getElementById('antSeg-el').style.fontWeight = 600;
         document.getElementById('green-bar').style.width = 20 + "%"; 
-        loadData(["antChamberCells-el","antChamberFlare-el",'kP-el','kPLoc-el']);
+        loadData(["antChamberCells-el","antChamberFlare-el",'kP-el']);
     </script>
     </body>
 </html>
