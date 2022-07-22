@@ -406,7 +406,7 @@ function tinu_rule_2(){
 function tinu_diagnosis(){
     let rule_1 = tinu_rule_1();
     let rule_2 = tinu_rule_2();
-    if(rule_1==true&&rule_2==true&&rule_3==true){
+    if(rule_1==true&&rule_2==true&&){
         antDxList.push('Tubulointerstitial Nephritis with Uveitis Syndrome');
     }
 }
