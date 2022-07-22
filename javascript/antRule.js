@@ -422,6 +422,9 @@ sau_diagnosis();
 tinu_diagnosis();
 console.log(antDxList);
 let antDxString = antDxList.join(", ");
+if(antDxString.length==0){
+    antDxString = "Undifferentiated"
+}
 document.getElementById('diagnosis-el').textContent = antDxString;
 let antSatString = antSatList.join(", ");
 document.getElementById("ruled-in").textContent = antSatString;
