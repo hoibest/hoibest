@@ -44,7 +44,7 @@ function cmvau_diagnosis(){
     let rule_1 = cmvau_rule_1();
     let rule_2 = cmvau_rule_2();
     if(rule_1==true&&rule_2==true){
-        antDxList.push('cmvau');
+        antDxList.push('Cytomegalovirus Anterior Uveitis');
     }
 }
 
@@ -104,7 +104,7 @@ function hsau_diagnosis(){
     let rule_2 = hsau_rule_2();
     let rule_3 = hsau_rule_3();
     if(rule_1==true&&rule_2==true&&rule_3==true){
-        antDxList.push('hsau');
+        antDxList.push('Herpes Simplex Anterior Uveitis');
     }
 }
 
@@ -164,7 +164,7 @@ function vzvau_diagnosis(){
     let rule_2 = vzvau_rule_2();
     let rule_3 = vzvau_rule_3();
     if(rule_1==true&&rule_2==true&&rule_3==true){
-        antDxList.push('vzvau');
+        antDxList.push('Varicella Zoster Virus Anterior Uveitis');
     }
 }
 
@@ -230,7 +230,7 @@ function fus_diagnosis(){
     let rule_3 = fus_rule_3();
     let rule_4 = fus_rule_4();
     if(rule_1==true&&rule_2==true&&rule_3==true&&rule_4==true){
-        antDxList.push('fus');
+        antDxList.push('Fuchs Uveitis Syndrome');
     }
 }
 
@@ -288,7 +288,7 @@ function jiacau_diagnosis(){
     let rule_2 = jiacau_rule_2();
     let rule_3 = jiacau_rule_3();
     if(rule_1==true&&rule_2==true&&rule_3==true){
-        antDxList.push('jiacu');
+        antDxList.push('Juvenile Idiopathic Arthritis-associated Chronic Anterior Uveitis');
     }
 }
 
@@ -359,10 +359,10 @@ function sau_diagnosis(){
     let rule_4 = sau_rule_4();
     if(rule_1==true){
         if(rule_2==true && rule_3==true){
-            antDxList.push('sau')
+            antDxList.push('Spondyloarthritis/HLA-B27-associated Anterior Uveitis')
         }
         else if(rule_4==true){
-            antDxList.push('sau');
+            antDxList.push('Spondyloarthritis/HLA-B27-associated Anterior Uveitis');
         }
     }
 }
@@ -407,7 +407,7 @@ function tinu_diagnosis(){
     let rule_1 = tinu_rule_1();
     let rule_2 = tinu_rule_2();
     if(rule_1==true&&rule_2==true&&rule_3==true){
-        antDxList.push('vzvau');
+        antDxList.push('Tubulointerstitial Nephritis with Uveitis Syndrome');
     }
 }
 
