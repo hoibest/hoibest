@@ -73,6 +73,7 @@ header > h1{
 .classifiedButton{
     border: none;
     border-bottom: 1px solid #E2E2E2;
+    background-color: white;
     height: 10%;
     display: block;
     text-align: start;
@@ -89,7 +90,7 @@ header > h1{
 }
 
 /*.classifiedButton--active + .classifiedContent {display: block}*/
-.classifiedButton--active {background: #777575;}
+.classifiedButton--active {background: #E2E2E2;}
 .classifiedButton--active::after {content: '\25b4'}
 
 
