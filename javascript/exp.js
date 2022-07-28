@@ -619,7 +619,8 @@ function sauDiagnosis(result){
     disList.outList.includes('sau #3'))&&disList.outList.includes('sau #4'))){
         disList.checkList.length=0;
     }
-    else if(a==TRUE && ((b==TRUE && c==TRUE) || d==TRUE)){
+    else if(disList.inList.includes('sau #1') && 
+    ((disList.inList.includes('sau #2') && disList.inList.includes('sau #3')) || disList.inList.includes('sau #4'))){
         dxList.push('SAU')
         disList.checkList.length=0;
     }
