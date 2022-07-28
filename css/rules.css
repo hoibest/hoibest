@@ -4,8 +4,10 @@
 
 .rules{
     display: flex;
-    width: 80%;
-    flex-direction: column;
+    width: 90%;
+    margin-top: 1%;
+    gap: 1%;
+    max-height: 100;
 }
 
 .rules--div{
@@ -14,4 +16,51 @@
 
 .title{
     color:darkblue;
+}
+
+.rule-img{
+    width: 100%;
+    max-height: fit-content;
+}
+
+.rules--col1{
+    width : 100%;
+}
+
+.rules--col2{
+    width : 50%;
+}
+
+@media only screen and (max-width: 1000px){
+    .rules{
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        margin-top: 1%;
+    }
+
+    .rules--col1{
+        width : 100%;
+    }
+    
+    .rules--col2{
+        width : 100%;
+    }
+}
+
+@media only screen and (max-width: 1000px) and (orientation: landscape) {
+    .rules{
+        display: flex;
+        flex-direction: row;
+        width: 95%;
+        margin-top: 1%;
+    }
+
+    .rules--col1{
+        width : 100%;
+    }
+    
+    .rules--col2{
+        width : 50%;
+    }
 }

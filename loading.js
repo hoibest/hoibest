@@ -25,6 +25,7 @@ function getSavedDate(v){
 
 function check(li,page){
     let canGo = true;
+    
     for(let i=0; i< li.length;i++){
         if(document.getElementById(li[i]).value==""){
             document.getElementById(li[i]).style.background = 'pink';
