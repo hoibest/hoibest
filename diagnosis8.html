@@ -70,65 +70,73 @@
                     <div class="input-col">
                         <div class="input-item">
                             <div><select id="posPcrCmv-el" onchange="keepData(this)">
-                                <option value=""></option>
+                                <option value="">Select</option>
                                 <option value="no">Negative</option>
                                 <option value="yes">Positive</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                             <div><select id="posPcrHsv-el" onchange="keepData(this)">
-                                <option value=""></option>
+                                <option value="">Select</option>
                                 <option value="no">Negative</option>
                                 <option value="yes">Positive</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                             <div><select id="posPcrVzv-el" onchange="keepData(this)">
-                                <option value=""></option>
+                                <option value="">Select</option>
                                 <option value="no">Negative</option>
                                 <option value="yes">Positive</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                             <div><select id="posHlaB27-el" onchange="keepData(this)">
-                                <option value=""></option>
+                                <option value="">Select</option>
                                 <option value="no">Negative</option>
                                 <option value="yes">Positive</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                             <div><select id="posRenalBiopsy-el" onchange="keepData(this)">
-                                <option value=""></option>
+                                <option value="">Select</option>
                                 <option value="no">Negative</option>
                                 <option value="yes">Positive</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                             <div> <select id="elevatedUrineBM-el" onchange="keepData(this)">
-                                <option value=""></option>
-                                <option value="no">Normal</option>
-                                <option value="yes">Elevated</option>
+                                <option value="">Select</option>
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                             <div><select id="abnormalUrineAn-el" onchange="keepData(this)">
-                                <option value=""></option>
-                                <option value="no">Normal</option>
-                                <option value="yes">Abnormal</option>
+                                <option value="">Select</option>
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
-                            <div><select id="eleavtedSerumCr-el" onchange="keepData(this)">
-                                <option value=""></option>
-                                <option value="no">Normal</option>
-                                <option value="yes">Elevated</option>
+                            <div><select id="elevatedSerumCr-el" onchange="keepData(this)">
+                                <option value="">Select</option>
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
@@ -142,7 +150,7 @@
                     <a style="text-decoration: none;" href="index.html">
                         <button class="next" style="background-color: #424242;"><div>Front</div></button>
                     </a>
-                    <a style="text-decoration: none;" href="result.html">
+                    <a style="text-decoration: none;" onclick='check(li,"result.html");' id="next">
                         <button onclick="patient.patientUpdate();" class="next"><div>Next</div></button>
                     </a>
                 </div>
@@ -153,19 +161,11 @@
     <script src="loading.js"></script>
     <script src="./javascript/patient.js"></script>
     <script>
-        document.getElementById('history-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('antSeg-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('cornea-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('postSeg-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('exOcularPath-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('spots-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('labs-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('imaging-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('labs-el').style.fontWeight = 600;
-        document.getElementById('green-bar').style.width = 80 + "%"; 
-        loadData(['posPcrCmv-el','posPcrHsv-el','posHlaB27-el',
+        design(8);
+        const li = ['posPcrCmv-el','posPcrHsv-el','posHlaB27-el','posPcrVzv-el',
         'posRenalBiopsy-el','elevatedUrineBM-el',"abnormalUrineAn-el",
-        "eleavtedSerumCr-el"]);
+        "elevatedSerumCr-el"]
+        loadData(li);
     </script>
     </body>
 </html>

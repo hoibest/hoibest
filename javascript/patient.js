@@ -10,6 +10,14 @@ const anatomicLocationObj = {
     }
 };
 
+const demographicsObj = {
+    age : IDK,
+    demographicsUpdate: function(){
+        this.age = getSavedData('age-el');
+        patient.demographicsObj = this;
+    }
+}
+
 
 const onsetObj = {
     onset : IDK,
@@ -41,20 +49,7 @@ const durationObj = {
 const lateralityObj = {
     laterality : IDK,
     lateralityUpdate : function(){
-        let side = getSavedData("laterality-el");
-
-        if(side=='leftEye' || side=='rightEye'){
-            this.laterality = 'monoUnilateral'
-        }
-        else if(side=='leftEyeAlternating' || side=='rightEyeAlternating'){
-            this.laterality = 'unilateralAlternating'
-        }
-        else if(side=='bothEyes'){
-            this.laterality = 'bilateral'
-        }
-        else if(side==''){
-            this.laterality = IDK
-        }
+        this.laterality= getSavedData("laterality-el");
         patient.lateralityObj = this;
     }
 };
@@ -75,10 +70,10 @@ const ocularFindingObj = {
     snowbanks: IDK,
     endoLesion: IDK,
     ocularFindingUpdate : function (){
-        this.antChamberCells = parseInt(getSavedData('antChamberCells-el'));
-        this.vitCells = getSavedData('vitCells-el');
-        this.antChamberFlare = parseInt(getSavedData('antChamberFlare-el'));
-        this.vitHaze = parseInt(getSavedData('vitHaze-el'));
+        this.antChamberCells = grade(getSavedData('antChamberCells-el'));
+        this.vitCells = grade(getSavedData('vitCells-el'));
+        this.antChamberFlare = grade(getSavedData('antChamberFlare-el'));
+        this.vitHaze = grade(getSavedData('vitHaze-el'));
         this.irisAtrophy = getSavedData('irisAtrophy-el');
         this.synechiae = getSavedData('synechiae-el');
         this.heterochromia = getSavedData('heterochromia-el');
@@ -100,7 +95,7 @@ const labFindingObj = {
     posRenalBiopsy : IDK,
     elevatedUrineBM : IDK,
     abnormalUrineAn : IDK,
-    eleavtedSerumCr : IDK,
+    elevatedSerumCr : IDK,
     labFindingUpdate : function(){
         this.posPcrCmv = getSavedData("posPcrCmv-el");
         this.posPcrHsv = getSavedData("posPcrHsv-el");
@@ -109,7 +104,7 @@ const labFindingObj = {
         this.posRenalBiopsy = getSavedData("posRenalBiopsy-el");
         this.elevatedUrineBM = getSavedData("elevatedUrineBM-el");
         this.abnormalUrineAn = getSavedData("abnormalUrineAn-el");
-        this.eleavtedSerumCr = getSavedData("eleavtedSerumCr-el");
+        this.elevatedSerumCr = getSavedData("elevatedSerumCr-el");
         patient.ocPathObj = this;
     }
 };
@@ -168,7 +163,7 @@ const exOcPathObj = {
 
 
 const patient = {
-    age : 27,
+    demographicsObj,
     anatomicLocationObj,
     onsetObj,
     courseObj,
@@ -183,6 +178,7 @@ const patient = {
 
     patientUpdate: function(){
         console.log("hi");
+        demographicsObj.demographicsUpdate();
         anatomicLocationObj.anatomicLocationUpdate();
         onsetObj.onsetUpdate();
         durationObj.durationUpdate();
@@ -197,23 +193,21 @@ const patient = {
     }
 };
 
-function keepData(el){
-    let id = el.id;
-    let val = document.getElementById(id).value;
-    sessionStorage.setItem(id,val);
-    console.log(sessionStorage);
-}
 
-function bigger(a,b) {
-    a = parseInt(a);
-    b = parseInt(b);
-    if(a > b){return a}
-    else{return b}
-} 
 
 function getSavedData(v){
     if(!sessionStorage.getItem(v)){
         return "";
     }
     return sessionStorage.getItem(v)
+}
+
+function grade(v){
+    if(v=="idk"){
+        console.log(v);
+        return v;
+    }
+    else{
+        return parseInt(v);
+    }
 }

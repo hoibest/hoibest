@@ -55,10 +55,7 @@
 
                 <div class="sub-container">
                     <div id="report-el" style="width: 80%; font-family: 'Roboto', 'sans-serif'; word-wrap: break-word;">Diagnosis : <span id="diagnosis-el">undifferentiated uveitis</span>
-                        <br><br>
-                        Ruled-in criteria : <span id="ruled-in"></span>
-                        <br><br>
-                        <!--Ruled-out criteria : <span id = 'ruled-out'></span>-->
+                        
                     </div>
                 </div>
 
@@ -69,7 +66,7 @@
                     <a style="text-decoration: none;" href="index.html">
                         <button class="next" style="background-color: #424242;"><div>Front</div></button>
                     </a>
-                    <a style="text-decoration: none;" href="result.html">
+                    <a style="text-decoration: none;" href="result2.html">
                         <button class="next"><div>Next</div></button>
                     </a>
                 </div>
@@ -78,21 +75,14 @@
             
         </div>
     <script src="loading.js"></script>
+    <script type="module" src="./javascript/exp.js"></script>
     <script type="module" src="./javascript/terms.js"></script>
-    <script type="module" src="./javascript/antRule.js"></script>
     <script>
-        document.getElementById('history-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('antSeg-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('cornea-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('postSeg-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('exOcularPath-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('spots-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('labs-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('imaging-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('results-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('results-el').style.fontWeight = 600;
-        document.getElementById('green-bar').style.width = 90 + "%"; 
-        /*document.getElementById('green-bar').style.borderRadius = 10 + 'px';*/
+        design(9);
+    </script>
+    <script type="module">
+        import {antDiagnosis} from "./javascript/exp.js"
+        antDiagnosis(1);
     </script>
     </body>
 </html>

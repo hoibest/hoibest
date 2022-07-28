@@ -38,7 +38,7 @@
                 <a class="navitem" id="postSeg-el">Post. Seg</a>
                 <a class="navitem" id="exOcularPath-el">Ex-Ocular Path</a>
                 <a class="navitem" id="spots-el">Spots</a>
-                <a class="navitem" id="spots-el">Imaging</a>
+                <a class="navitem" id="imaging-el">Imaging</a>
                 <a class="navitem" id="labs-el">Labs</a>
                 <a class="navitem" id="results-el">Result</a>
             </div>
@@ -68,52 +68,65 @@
                     <div class="input-col">
                         <div class="input-item">
                             <div><select id="vitritis-el" onchange="keepData(this)">
-                                <option value=""></option>
+                                <option value="">Select</option>
                                 <option value="no">No</option>
                                 <option value="yes">Yes</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                             <div><select id="vitCells-el" onchange="keepData(this)">
-                                <option value=""></option>
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
+                                <option value=''>Select</option>
+                                <option value=0>0</option>
+                                <option value=1/2>½+</option>
+                                <option value=1>1+</option>
+                                <option value=2>2+</option>
+                                <option value=3>3+</option>
+                                <option value=4>4+</option>
+                                <option value='idk'>Don't know</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                             <div><select id="vitHaze-el" onchange="keepData(this)">
-                                <option value=0>0 Normal</option>
-                                <option value=1>1 Debris present but posterior pole clear and crisp</option>
-                                <option value=2>2 Posterior pole slightly hazy</option>
-                                <option value=3>3 Posterior pole very hazy</option>
-                                <option value=4>4 Disc and major vessels visible but only just</option>
-                                <option value=5>5 No fundal details visible</option>
+                                <option value=''>Select</option>
+                                <option value=0>0</option>
+                                <option value=0.5>½+</option>
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                                <option value='idk'>Don't know</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                             <div><select id="retVasChange-el" onchange="keepData(this)">
-                                <option value=""></option>
-                                <option value="retVasSheathing">Peripheral Vasculitis with Sheathing</option>
+                                <option value="">Select</option>
+                                <option value="none">None</option>
+                                <option value="retVasSheathing">Peripheral Vascular Sheathing or Leakage</option>
                                 <option value="retlVasOcclusion">Retinal Vascular Occlusion</option>
+                                <option value='idk'>Don't know</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                             <div><select id="snowballs-el" onchange="keepData(this)">
-                                <option value=""></option>
+                                <option value="">Select</option>
                                 <option value="no">No</option>
                                 <option value="yes">Yes</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                             <div><select id="snowbanks-el" onchange="keepData(this)">
-                                <option value=""></option>
+                                <option value="">Select</option>
                                 <option value="no">No</option>
                                 <option value="yes">Yes</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
@@ -127,7 +140,7 @@
                     <a style="text-decoration: none;" href="index.html">
                         <button class="next" style="background-color: #424242;"><div>Front</div></button>
                     </a>
-                    <a style="text-decoration: none;" href="diagnosis5.html">
+                    <a style="text-decoration: none;" onclick='check(li,"diagnosis5.html");' id="next">
                         <button class="next"><div>Next</div></button>
                     </a>
                 </div>
@@ -138,14 +151,10 @@
     <script src="loading.js"></script>
     <script src="./javascript/patient.js"></script>
     <script>
-        document.getElementById('history-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('antSeg-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('cornea-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('postSeg-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('postSeg-el').style.fontWeight = 600;
-        document.getElementById('green-bar').style.width = 40 + "%"; 
-        loadData(['vitritis-el','vitCells-el','vitHaze-el','retVasChange-el',
-        'snowballs-el','snowbanks-el']);
+        design(4);
+        const li = ['vitritis-el','vitCells-el','vitHaze-el','retVasChange-el',
+        'snowballs-el','snowbanks-el'];
+        loadData(li);
     </script>
     </body>
 </html>

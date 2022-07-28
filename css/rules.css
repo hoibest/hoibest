@@ -1,0 +1,17 @@
+.classifiedContent{
+    align-items: center;
+}
+
+.rules{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+}
+
+.rules--div{
+    min-height: 30px;
+}
+
+.title{
+    color:darkblue;
+}

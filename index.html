@@ -43,7 +43,7 @@
                 <a class="navitem" id="results-el">Result</a>
             </div>
 
-        
+            
             <div class="questions-col">
                 <div class="greeting">
                     <div class="greeting-section">
@@ -61,27 +61,24 @@
                     <div class="input-col">
                         <div class="input-item">
                             <div><select id="anatomicLocation-el" onchange="keepData(this)">                    
-                                <option value=""></option>
+                                <option value="">Select</option>
                                 <option value="anterior">Anterior</option>
                                 <option value="intermediate">Intermediate</option>
                                 <option value="posterior">Posterior</option>
                                 <option value="panuveitis">Panuveitis</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                             <div><select id="age-el" onchange="keepData(this)">                    
-                                <option value=""></option>
-                                <option value="0-10">0-10</option>
-                                <option value="10-20">10-20</option>
-                                <option value="20-30">20-30</option>
-                                <option value="30-40">30-40</option>
-                                <option value="40-50">40-50</option>
-                                <option value="50-60">50-60</option>
-                                <option value="60-70">60-70</option>
-                                <option value="70-80">70-80</option>
-                                <option value="80-90">80-90</option>
-                                <option value="90-100">90-100</option>
+                                <option value="">Select</option>
+                                <option value="lower16">≤16</option>
+                                <option value="bw17and50">17-50</option>
+                                <option value="bw51and59">51-59</option>
+                                <option value="higher60">≥60</option>
+                                <option value="idk">Don't know</option>
+                                
                             </select></div>
                         </div>
                     </div>
@@ -91,7 +88,7 @@
                     <a style="text-decoration: none;" onclick="sessionStorage.clear(); loadData(['anatomicLocation-el','age-el']);">
                         <button class="back"><div>Restart</div></button>
                     </a>
-                    <a style="text-decoration: none;" href="diagnosis1.html">
+                    <a style="text-decoration: none;" onclick="check(li,'diagnosis1.html');" id="next">
                         <button class="next"><div>Next</div></button>
                     </a>
                 </div>
@@ -100,10 +97,11 @@
             
         </div>
     <script src="loading.js"></script>
-    <script src="./javascript/patient.js"></script>
     <script>
         document.getElementById('green-bar').style.width = 0 + "%"; 
-        loadData(['anatomicLocation-el','age-el'])
+        let li = ['anatomicLocation-el','age-el'];
+        loadData(li);
     </script>
+
     </body>
 </html>

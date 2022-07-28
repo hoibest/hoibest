@@ -38,7 +38,7 @@
                 <a class="navitem" id="postSeg-el">Post. Seg</a>
                 <a class="navitem" id="exOcularPath-el">Ex-Ocular Path</a>
                 <a class="navitem" id="spots-el">Spots</a>
-                <a class="navitem" id="spots-el">Imaging</a>
+                <a class="navitem" id="imaging-el">Imaging</a>
                 <a class="navitem" id="labs-el">Labs</a>
                 <a class="navitem" id="results-el">Result</a>
             </div>
@@ -65,30 +65,39 @@
                     <div class="input-col">
                         <div class="input-item">
                             <div><select id="antChamberCells-el" onchange="keepData(this)">
-                                <option value=0>0 (Cells in field =< 1)</option>
-                                <option value=1>1 (Cells in field = 1-5)</option>
-                                <option value=2>2 (Cells in field = 6-15)</option>
-                                <option value=3>3 (Cells in field = 16-25)</option>
-                                <option value=4>4 (Cells in field = 26-50)</option>
-                                <option value=5>5 (Cells in field > 50)</option>
+                                <option value="">Select</option>
+                                <option value=0>0</option>
+                                <option value=1/2>½+</option>
+                                <option value=1>1+</option>
+                                <option value=2>2+</option>
+                                <option value=3>3+</option>
+                                <option value=4>4+</option>
+                                <option value='idk'>IDK</option>
                             </select></div>
                         </div>
     
                         <div class="input-item">
                             <div><select id="antChamberFlare-el" onchange="keepData(this)">
-                                <option value=0>0 (None)</option>
-                                <option value=1>1 (Hardly any)</option>
-                                <option value=2>2 (Definite blur but iris details still clear)</option>
-                                <option value=3>3 (Obvious blur with iris details hazy)</option>
-                                <option value=4>4 (Fibrinous flare/plastic acqueuos)</option>
+                                <option value="">Select</option>
+                                <option value=0>0</option>
+                                <option value=1>1+</option>
+                                <option value=2>2+</option>
+                                <option value=3>3+</option>
+                                <option value=4>4+</option>
+                                <option value='idk'>Don't know</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                             <div><select id="kP-el" onchange="keepData(this)">                    
-                                <option value=""></option>
+                                <option value="">Select</option>
                                 <option value="none">None</option>
+                                <option value="fine">Fine</option>
+                                <option value="round">Round</option>
                                 <option value="stellate">Stellate</option>
+                                <option value="muttonFat">Mutton Fat</option>
+                                <option value="numular">Numular</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
@@ -103,7 +112,7 @@
                     <a style="text-decoration: none;" href="index.html">
                         <button class="next" style="background-color: #424242;"><div>Front</div></button>
                     </a>
-                    <a style="text-decoration: none;" href="diagnosis3.html">
+                    <a style="text-decoration: none;" onclick='check(li,"diagnosis3.html");' id="next">
                         <button class="next"><div>Next</div></button>
                     </a>
                 </div>
@@ -114,11 +123,9 @@
     <script src="loading.js"></script>
     <script src="./javascript/patient.js"></script>
     <script>
-        document.getElementById('history-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('antSeg-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('antSeg-el').style.fontWeight = 600;
-        document.getElementById('green-bar').style.width = 20 + "%"; 
-        loadData(["antChamberCells-el","antChamberFlare-el",'kP-el']);
+        design(2);
+        let li = ["antChamberCells-el","antChamberFlare-el",'kP-el'];
+        loadData(li);
     </script>
     </body>
 </html>

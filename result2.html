@@ -1,0 +1,217 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/rules.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="theme-color" content="#e64626">
+    </head>
+
+    <body>
+        <header>
+            <h1>Uveitis</h1>
+        </header>
+        <div class="mobile-nav">
+            <div class="progress-nav">
+                <div>
+                    <!--Write Navigation-->
+                    10/10 Rules
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="bar">
+                    <div class="green-bar" id="green-bar"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="navbar-col">
+                <a class="navitem" id="history-el">History</a>
+                <a class="navitem" id="antSeg-el">Ant. Seg</a>
+                <a class="navitem" id="cornea-el">Cornea</a>
+                <a class="navitem" id="postSeg-el">Post. Seg</a>
+                <a class="navitem" id="exOcularPath-el">Ex-Ocular Path</a>
+                <a class="navitem" id="spots-el">Spots</a>
+                <a class="navitem" id="imaging-el">Imaging</a>
+                <a class="navitem" id="labs-el">Labs</a>
+                <a class="navitem" id="results-el">Result</a>
+                <a class="navitem" id="rules-el">Rules</a>
+            </div>
+
+            <div class="questions-col">
+                <!--write down symptom-->
+                <div class="greeting">
+                    <div class="greeting-section">
+                        <div class="please"></div>
+                        <div class="sub-title">Rules</div>
+                    </div>
+
+
+                </div>
+
+                <div class="classification">
+                    <button type="button" class="classifiedButton" id="cmvau">Cytomegalovirus Anterior Uveitis</button>
+                    <div class="classifiedContent">
+                        <div class="rules">
+                            <div class="rules--div"></div>
+                            <div class="rules--div title">Ruled-in Rules</div>
+                            <div class="rules--div" id="cmvau-ruled-in"></div>
+                            <div class="rules--div title">Ruled-out Rules</div>
+                            <div class="rules--div" id="cmvau-ruled-out"></div>
+                            <div class="rules--div title">Required Check Rules</div>
+                            <div class="rules--div" id="cmvau-check"></div>
+                        </div>
+                    </div>
+                    <button type="button" class="classifiedButton" id="hsau">Herpes Simplex Anterior Uveitis</button>
+                    <div class="classifiedContent">
+                        <div class="rules">
+                            <div class="rules--div"></div>
+                            <div class="rules--div title">Ruled-in Rules</div>
+                            <div class="rules--div" id="hsau-ruled-in"></div>
+                            <div class="rules--div title">Ruled-out Rules</div>
+                            <div class="rules--div" id="hsau-ruled-out"></div>
+                            <div class="rules--div title">Required Check Rules</div>
+                            <div class="rules--div" id="hsau-check"></div>
+                        </div>
+                    </div>
+                    <button type="button" class="classifiedButton" id="vzvau">Varicella Zoster Virus Anterior Uveitis</button>
+                    <div class="classifiedContent">
+                        <div class="rules">
+                            <div class="rules--div"></div>
+                            <div class="rules--div title">Ruled-in Rules</div>
+                            <div class="rules--div" id="vzvau-ruled-in"></div>
+                            <div class="rules--div title">Ruled-out Rules</div>
+                            <div class="rules--div" id="vzvau-ruled-out"></div>
+                            <div class="rules--div title">Required Check Rules</div>
+                            <div class="rules--div" id="vzvau-check"></div>
+                        </div>
+                    </div>
+                    <button type="button" class="classifiedButton" id="fus">Fuchs Uveitis Syndrome</button>
+                    <div class="classifiedContent">
+                        <div class="rules">
+                            <div class="rules--div"></div>
+                            <div class="rules--div title">Ruled-in Rules</div>
+                            <div class="rules--div" id="fus-ruled-in"></div>
+                            <div class="rules--div title">Ruled-out Rules</div>
+                            <div class="rules--div" id="fus-ruled-out"></div>
+                            <div class="rules--div title">Required Check Rules</div>
+                            <div class="rules--div" id="fus-check"></div>
+                        </div>
+                    </div>
+                    <button type="button" class="classifiedButton" id="jiacau">JIA-associated Chronic Anterior Uveitis</button>
+                    <div class="classifiedContent">
+                        <div class="rules">
+                            <div class="rules--div"></div>
+                            <div class="rules--div title">Ruled-in Rules</div>
+                            <div class="rules--div" id="jiacau-ruled-in"></div>
+                            <div class="rules--div title">Ruled-out Rules</div>
+                            <div class="rules--div" id="jiacau-ruled-out"></div>
+                            <div class="rules--div title">Required Check Rules</div>
+                            <div class="rules--div" id="jiacau-check"></div>
+                        </div>
+                    </div>
+                    <button type="button" class="classifiedButton" id="sau">Spondyloarthritis/HLA-B27 Anterior Uveitis</button>
+                    <div class="classifiedContent">
+                        <div class="rules">
+                            <div class="rules--div"></div>
+                            <div class="rules--div title">Ruled-in Rules</div>
+                            <div class="rules--div" id="sau-ruled-in"></div>
+                            <div class="rules--div title">Ruled-out Rules</div>
+                            <div class="rules--div" id="sau-ruled-out"></div>
+                            <div class="rules--div title">Required Check Rules</div>
+                            <div class="rules--div" id="sau-check"></div>
+                        </div>
+                    </div>
+                    <button type="button" class="classifiedButton" id="tinu">Tubulointerstitial Nephritis with Uveitis Syndrome</button>
+                    <div class="classifiedContent">
+                        <div class="rules">
+                            <div class="rules--div"></div>
+                            <div class="rules--div title">Ruled-in Rules</div>
+                            <div class="rules--div" id="tinu-ruled-in"></div>
+                            <div class="rules--div title">Ruled-out Rules</div>
+                            <div class="rules--div" id="tinu-ruled-out"></div>
+                            <div class="rules--div title">Required Check Rules</div>
+                            <div class="rules--div" id="tinu-check"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="back-next">
+                    <a style="text-decoration: none;" href="result.html">
+                        <button class="back">Back</button>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <button class="next" style="background-color: #424242;"><div>Front</div></button>
+                    </a>
+                    <a style="text-decoration: none;" href="result2.html">
+                        <button class="next"><div>Next</div></button>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <script>
+            let disease = ['cmvau','hsau','vzvau','fus','jiacau','sau','tinu']
+            document.querySelectorAll('.classifiedButton').forEach(button => {
+                button.addEventListener('click', () => {
+                    const classifiedContent = button.nextElementSibling;
+                    const selected = button.id;
+                    console.log(selected);
+                    button.classList.toggle('classifiedButton--active');
+                    
+                
+                    if(button.classList.contains('classifiedButton--active')){
+                        for(let i = 0; i < disease.length; i=i+1){
+                            if(disease[i]!=selected){
+                                let hide = document.getElementById(disease[i]);
+                                hide.style.display = 'None'
+                            }
+                            else{
+                                classifiedContent.style.minHeight = 90 + '%';
+                            }
+                        }
+                    }
+                    else{
+                        for(let i = 0; i < disease.length; i=i+1){
+                            if(disease[i]!=selected){
+                                let hide = document.getElementById(disease[i]);
+                                hide.style.display = 'block';
+                            }
+                            else{
+                                classifiedContent.style.minHeight = 0;
+                            }
+                        }
+                     }
+                })
+            })
+        </script>
+        <script src="loading.js"></script>
+        <script type="module" src="./javascript/terms.js"></script>
+        <script type="module" src="./javascript/exp.js"></script>
+        <script>
+            document.getElementById('history-el').style.borderLeftColor = '#59A77D';
+            document.getElementById('antSeg-el').style.borderLeftColor = '#59A77D';
+            document.getElementById('cornea-el').style.borderLeftColor = '#59A77D';
+            document.getElementById('postSeg-el').style.borderLeftColor = '#59A77D';
+            document.getElementById('exOcularPath-el').style.borderLeftColor = '#59A77D';
+            document.getElementById('spots-el').style.borderLeftColor = '#59A77D';
+            document.getElementById('labs-el').style.borderLeftColor = '#59A77D';
+            document.getElementById('imaging-el').style.borderLeftColor = '#59A77D';
+            document.getElementById('results-el').style.borderLeftColor = '#59A77D';
+            document.getElementById('results-el').style.fontWeight = 600;
+            document.getElementById('green-bar').style.width = 100 + "%"; 
+        </script>
+        <script type="module">
+            import {antDiagnosis} from "./javascript/exp.js"
+            antDiagnosis(2);
+        </script>
+    </body>
+</html>

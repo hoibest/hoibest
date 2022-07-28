@@ -38,7 +38,7 @@
                 <a class="navitem" id="postSeg-el">Post. Seg</a>
                 <a class="navitem" id="exOcularPath-el">Ex-Ocular Path</a>
                 <a class="navitem" id="spots-el">Spots</a>
-                <a class="navitem" id="spots-el">Imaging</a>
+                <a class="navitem" id="imaging-el">Imaging</a>
                 <a class="navitem" id="labs-el">Labs</a>
                 <a class="navitem" id="results-el">Result</a>
             </div>
@@ -56,7 +56,7 @@
                 <div class="sub-container">
                     <div class="symptom-col">
                         <div class="symptom-item"><div>Iris Atrophy</div></div>
-                        <div class="symptom-item"><div>Synechiae</div></div>
+                        <div class="symptom-item"><div>Posterior Synechiae</div></div>
                         <div class="symptom-item"><div>Heterochromia</div></div>
                         <div class="symptom-item"><div>Iris Nodules</div></div>
                         <div class="symptom-item"><div>Endotheliitis</div></div>
@@ -69,59 +69,66 @@
                     <div class="input-col">
                         <div class="input-item">
                             <div><select id="irisAtrophy-el" onchange="keepData(this)">
-                                <option value=""></option>
+                                <option value="">Select</option>
                                 <option value="none">None</option>
                                 <option value="sectoral">Sectoral</option>
-                                <option value="diffuse">Diffuse (patchy)</option>
+                                <option value="diffuse">Diffuse</option>
+                                <option value="diffuse">Patchy</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                             <div><select id="synechiae-el" onchange="keepData(this)">
-                                <option value=""></option>
-                                <option value="none">None</option>
-                                <option value="anterior">Anterior</option>
-                                <option value="posterior">Posterior</option>
+                                <option value="">Select</option>
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                             <div><select id="heterochromia-el" onchange="keepData(this)">
-                                <option value=""></option>
+                                <option value="">Select</option>
                                 <option value="no">No</option>
                                 <option value="yes">Yes</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                             <div><select id="irisNodules-el" onchange="keepData(this)">
-                                <option value=""></option>
+                                <option value="">Select</option>
                                 <option value="no">No</option>
                                 <option value="yes">Yes</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                             <div><select id="endotheliitis-el" onchange="keepData(this)">
-                                <option value=""></option>
+                                <option value="">Select</option>
                                 <option value="no">No</option>
                                 <option value="yes">Yes</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                             <div><select id="endoLesion-el" onchange="keepData(this)">
-                                <option value=""></option>
+                                <option value="">Select</option>
                                 <option value="no">No</option>
                                 <option value="yes">Yes</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                         <div><select id="herpesSimplexKeratitis-el" onchange="keepData(this)">
-                            <option value=""></option>
+                            <option value="">Select</option>
                             <option value="no">No</option>
                             <option value="yes">Yes</option>
+                            <option value="idk">Don't know</option>
                         </select></div>
                         </div>
                     </div>
@@ -134,7 +141,7 @@
                     <a style="text-decoration: none;" href="index.html">
                         <button class="next" style="background-color: #424242;"><div>Front</div></button>
                     </a>
-                    <a style="text-decoration: none;" href="diagnosis4.html">
+                    <a style="text-decoration: none;" id='next' onclick='check(li,"diagnosis4.html");'>
                         <button class="next"><div>Next</div></button>
                     </a>
                 </div>
@@ -145,13 +152,10 @@
     <script src="loading.js"></script>
     <script src="./javascript/patient.js"></script>
     <script>
-        document.getElementById('history-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('antSeg-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('cornea-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('cornea-el').style.fontWeight = 600;
-        document.getElementById('green-bar').style.width = 30 + "%"; 
-        loadData(["irisAtrophy-el","synechiae-el",'heterochromia-el','irisNodules-el',
-        'endotheliitis-el','endoLesion-el','herpesSimplexKeratitis-el']);
+        design(3);
+        const li = ["irisAtrophy-el","synechiae-el",'heterochromia-el','irisNodules-el',
+        'endotheliitis-el','endoLesion-el','herpesSimplexKeratitis-el']
+        loadData(li);
     </script>
     </body>
 </html>

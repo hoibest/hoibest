@@ -1,6 +1,6 @@
 <!--History at Presentation-->
 
-<html>
+<html id="diagnosis1-page">
     <head>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
             </div>
             <div class="progress-bar">
                 <div class="bar">
-                    <div class="green-bar"></div>
+                    <div class="green-bar" id="green-bar"></div>
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@
                 <a class="navitem" id="postSeg-el">Post. Seg</a>
                 <a class="navitem" id="exOcularPath-el">Ex-Ocular Path</a>
                 <a class="navitem" id="spots-el">Spots</a>
-                <a class="navitem" id="spots-el">Imaging</a>
+                <a class="navitem" id="imaging-el">Imaging</a>
                 <a class="navitem" id="labs-el">Labs</a>
                 <a class="navitem" id="results-el">Result</a>
             </div>
@@ -54,54 +54,49 @@
 
                 <div class="sub-container">
                     <div class="symptom-col">
-                        <div class="symptom-item"><div>Onset</div></div>
-                        <div class="symptom-item"><div>Duration</div></div>
-                        <div class="symptom-item"><div>Course</div></div>
-                        <div class="symptom-item"><div>Acute Course</div></div>
-                        <div class="symptom-item"><div>Affected Eye(s)</div></div>
+                        <div class="symptom-item"><div id="onset-sx">Onset</div></div>
+                        <div class="symptom-item"><div id="duration-sx">Duration</div></div>
+                        <div class="symptom-item"><div id="course-sx">Course</div></div>
+                        <div class="symptom-item"><div id="laterality-sx">Laterality</div></div>
                     </div>
 
                     <div class="input-col">
                         <div class="input-item">
                             <div><select id="onset-el" onchange="keepData(this)">                    
-                                <option value=""></option>
+                                <option value="">Select</option>
                                 <option value="sudden">Sudden</option>
                                 <option value="insidious">Insidious</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
                             <div><select id="duration-el" onchange="keepData(this)">
-                                <option value=""></option>
+                                <option value="">Select</option>
                                 <option value="limited">Limited</option>
                                 <option value="persistent">Persistent</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
                         <div class="input-item">
-                            <div><select id="course-el" onchange="two(this)">
-                                <option value=""></option>
-                                <option value="acute">Acute</option>
+                            <div><select id="course-el" onchange="keepData(this)">
+                                <option value="">Select</option>
+                                <option value="acuteMonophasic">Acute, monophasic</option>
+                                <option value="acuteRecurrent">Acute, recurrent</option>
                                 <option value="chronic">Chronic</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
-                        <div class="input-item">
-                            <div><select id="acuteCourse-el" onchange="keepData(this)">
-                                <option value=""></option>
-                                <option value="monophasic">Monophasic</option>
-                                <option value="recurrent">Recurrent</option>
-                            </select></div>
-                        </div>
 
                         <div class="input-item">
                             <div><select id="laterality-el" onchange="keepData(this)">
-                                <option value=""></option>
-                                <option value="leftEye">Left Eye</option>
-                                <option value="leftEyeAlternating">Left Eye Alternating</option>
-                                <option value="rightEye">Right Eye</option>
-                                <option value="rightEyeAlternating">Right Eye Alternating</option>
-                                <option value="bothEyes">Both Eyes</option>
+                                <option value="">Select</option>
+                                <option value="monoUnilateral">Unilateral</option>
+                                <option value="unilateralAlternating">Unilateral, alternating</option>
+                                <option value="bilateral">Bilateral</option>
+                                <option value="idk">Don't know</option>
                             </select></div>
                         </div>
 
@@ -115,7 +110,7 @@
                     <a style="text-decoration: none;" href="index.html">
                         <button class="next" style="background-color: #424242;"><div>Front</div></button>
                     </a>
-                    <a style="text-decoration: none;" href="diagnosis2.html">
+                    <a style="text-decoration: none;" onclick="check(li,'diagnosis2.html');" id="next">
                         <button class="next"><div>Next</div></button>
                     </a>
                 </div>
@@ -126,27 +121,9 @@
     <script src="loading.js"></script>
     <script src="./javascript/patient.js"></script>
     <script>
-        document.getElementById('history-el').style.borderLeftColor = '#59A77D';
-        document.getElementById('history-el').style.fontWeight = 600;
-        loadData(['onset-el','duration-el','course-el','laterality-el','acuteCourse-el']);
-        function two(t){
-            keepData(t);
-            if(document.getElementById('course-el').value!="acute"){
-                document.getElementById('acuteCourse-el').style.display = "none";
-                document.getElementById('acuteCourse-el').value = '';
-                keepData(document.getElementById('acuteCourse-el'));
-            }
-            else{
-                document.getElementById('acuteCourse-el').style.display = "unset";
-            }
-        }
-        if(document.getElementById('course-el').value!="acute"){
-                document.getElementById('acuteCourse-el').style.display = "none";
-                document.getElementById('acuteCourse-el').value = '';
-                keepData(document.getElementById('acuteCourse-el'));
-        } else{
-                document.getElementById('acuteCourse-el').style.display = "unset";
-        }
+        design(1);
+        let li = ['onset-el','duration-el','course-el','laterality-el'];
+        loadData(li);
     </script>
     </body>
 </html>

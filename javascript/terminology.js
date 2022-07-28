@@ -1,0 +1,45 @@
+const p = JSON.parse(sessionStorage.patient);
+
+/*const all long terminology*/
+export const COURSE = {v: p.courseObj.course, n: 'COURSE'};
+export const DURATION = {v: p.durationObj.duration, n: 'DURATION'};
+export const ONSET = {v: p.onsetObj.onset, n: 'ONSET'};
+export const LATERALITY = {v: p.lateralityObj.laterality, n: 'LATERALITY'};
+export const AGE = {v: p.demographicsObj.age, n: 'AGE'};
+export const ANT_CHAMBER_CELLS = {v: p.ocularFindingObj.antChamberCells, n: 'Anterior Chamber Cells'};
+export const ANT_CHAMBER_FLARE = {v: p.ocularFindingObj.antChamberFlare, n: 'Anterior Chamber Flare'};
+export const KP = {v: p.ocularFindingObj.keraticPrecipitate, n: 'Keratic Precipitate'};
+export const IRIS_ATROPHY = {v: p.ocularFindingObj.irisAtrophy, n: 'IRIS ATROPHY'};
+export const SYNECHIAE = {v: p.ocularFindingObj.synechiae, n: 'SYNECHIAE'};
+export const HETEROCHROMIA = {v: p.ocularFindingObj.heterochromia, n: 'HETEROCHROMIA'};
+export const IRIS_NODULES = {v: p.ocularFindingObj.irisNodules, n: 'IRIS NODULES'};
+export const ENDO_LESION = {v: p.ocularFindingObj.endoLesion, n: 'ENDOTHELIAL LESIONS'};
+export const RET_VAS_CHANGE = {v: p.ocularFindingObj.retinalVascularChange, n: 'RETINAL VASCULAR CHANGES'};
+export const SNOWBALLS = {v: p.ocularFindingObj.snowballs, n: 'SNOW BALLS'};
+export const SNOWBANKS = {v: p.ocularFindingObj.snowbanks, n: 'SNOWBANKS'};
+export const VIT_CELLS = {v: p.ocularFindingObj.vitCells, n: 'VITREOUS CELLS'};
+export const VIT_HAZE = {v: p.ocularFindingObj.vitHaze, n: 'VITREOUS HAZE'};
+export const CHOROIDITIS = {v: p.ocPathObj.choroiditis, n: 'CHOROIDITIS'};
+export const ENDOTHELIITIS = {v: p.ocPathObj.endotheliitis, n: 'ENDOTHELIITIS'};
+export const HERPES_SIMPLEX_KERATITIS = {v: p.ocPathObj.herpesSimplexKeratitis, n: 'HERPES SIMPLEX KERATITIS'};
+export const RETINITIS = {v: p.ocPathObj.retinitis, n: 'Retinitis'};
+export const VITRITIS = {v: p.ocPathObj.vitritis, n: 'VITRITIS'};
+export const SPONDYLOARTHRITIS = {v: p.exOcPathObj.asasDefinedSpondyloarthritis, n: 'SPONDYLOARTHRITIS'};
+export const DERM_HERPES_ZOSTER = {v: p.exOcPathObj.dermatomalHerpesZoster, n: 'DERMATOMAL HERPES ZOSTER'};
+export const JUVENILE_PSORIATIC_ARTHRITIS = {v: p.exOcPathObj.juvenilePsoriaticArthritis, n: 'JUVENILE PSORIATIC ARTHRITIS'};
+export const OLIGOARTHRITIS = {v: p.exOcPathObj.oligoarthritis, n: 'OLIGOARTHRITIS'};
+export const RF_NEG_POLYARTHRITIS = {v: p.exOcPathObj.rfNegativePolyarthritis, n: 'RF-NEGATIVE POLYARTHRITIS'};
+export const MS = {v: p.exOcPathObj.ms, n: 'MULTIPLE SCLEROSIS'};
+export const FA = {v: p.imagingObj.fa, n: 'IMAGING: FA'};
+export const FA_DES = {v: p.imagingObj.faDes, n: 'IMAGING: FA DESCRIPTOR'};
+export const FAF = {v: p.imagingObj.faf, n: 'IMAGING: FAF'};
+export const OCT = {v: p.imagingObj.oct, n: 'IMAGING: OCT'};
+export const AB_URINE_AN = {v: p.labFindingObj.abnormalUrineAn, n: 'ABNORMAL URINE ANALYSIS'};
+export const EL_SERUM_CR = {v: p.labFindingObj.elevatedSerumCr, n: 'ELEVATED SERUM CREATININE'};
+export const EL_URINE_BM = {v: p.labFindingObj.elevatedUrineBM, n: 'ELEVATED URINE β-MICROGLOBULIN'};
+export const POS_HLA_B27 = {v: p.labFindingObj.posHlaB27, n: 'POS HLA-B27'};
+export const POS_PCR_CMV = {v: p.labFindingObj.posPcrCmv, n: 'PCR CMV'};
+export const POS_PCR_VZV = {v: p.labFindingObj.posPcrVzv, n: 'PCR VZV'};
+export const POS_PCR_HSV = {v: p.labFindingObj.posPcrHsv, n: 'PCR HSV'};
+export const POS_RENAL_BIOPSY = {v: p.labFindingObj.posRenalBiopsy, n: 'RENAL BIOPSY'};
+

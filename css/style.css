@@ -59,6 +59,55 @@ header > h1{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.classification{
+    /*border: 1px dotted blue;*/
+    min-height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    border-bottom: 1px solid #E2E2E2;
+    justify-content: start;
+    font-family: 'Roboto', 'sans-serif';
+}
+
+.classifiedButton{
+    border: none;
+    border-bottom: 1px solid #E2E2E2;
+    height: 10%;
+    display: block;
+    text-align: start;
+    padding-left: 10%;
+    padding-right: 10%;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.classifiedButton::after{
+    content: '\25be';
+    float: right;
+    transform: scale(1.5);
+}
+
+/*.classifiedButton--active + .classifiedContent {display: block}*/
+.classifiedButton--active {background: #777575;}
+.classifiedButton--active::after {content: '\25b4'}
+
+
+.classifiedContent{
+    
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*
+    display: none;
+    overflow: auto;
+    */
+}
+
 .sub-container{
     /*border: 1px dotted blue;*/
     height: 70%;
